@@ -2,9 +2,9 @@
 
 module.exports = {
 	app: {
-		title: 'wave-website',
-		description: 'Fullstack MEAN, mostly statics.',
-		keywords: 'MongoDB, Express, AngularJS, Node.js'
+		title: 'Wave Website',
+		description: 'MEAN',
+		keywords: 'MEAN'
 	},
 	port: process.env.PORT || 3000,
 	templateEngine: 'swig',

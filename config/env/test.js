@@ -4,7 +4,7 @@ module.exports = {
 	db: 'mongodb://localhost/wave-website-test',
 	port: 3001,
 	app: {
-		title: 'wave-website - Test Environment'
+		title: 'Wave Website - Test Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',

@@ -3,7 +3,7 @@
 module.exports = {
 	db: 'mongodb://localhost/wave-website-dev',
 	app: {
-		title: 'wave-website - Development Environment'
+		title: 'Wave Website - Development Environment'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',
