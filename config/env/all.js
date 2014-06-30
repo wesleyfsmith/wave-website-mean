@@ -2,7 +2,7 @@
 
 module.exports = {
 	app: {
-		title: 'Wave Website',
+		title: 'wave-website',
 		description: 'MEAN',
 		keywords: 'MEAN'
 	},

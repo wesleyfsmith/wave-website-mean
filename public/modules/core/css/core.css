@@ -7,3 +7,185 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
 	display: none !important;
 }
+
+
+/* Added styles */
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+    .container {
+        max-width: 900px;
+    }
+}
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+
+    /* Non-scaffold css */
+
+    .logo {
+        background: url(../img/brand/wave_logo.png) 50% 0 no-repeat fixed;
+    }
+
+    .selling-points {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .selling-points .col-md-4 {
+        width: 33%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .selling-points p {
+
+    }
+
+    .our-work {
+        width: 100%;
+        text-align: center;
+    }
+
+    .row iframe {
+        width: 50%;
+        margin: 0 auto;
+        float: left;
+    }
+
+    .our-work {
+        margin-bottom: 20px;
+    }
+
+    .our-work h2 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .projects {
+        width: 50%;
+        height: 100%;
+        float: right;
+        margin: 0 auto;
+    }
+
+    .projects .single-project {
+        width: 45%;
+        display: inline-block;
+        background: url(../img/Magic-school-bus.jpg) 50% 0 no-repeat fixed;
+        height: 135px;
+        text-align: center;
+        border: 1px solid;
+    }
+
+    .projects .bottom-project {
+        margin-top: 10px;
+    }
+
+    .projects .right-project {
+        margin-left: 10px;
+    }
+
+    .nav-pills li .active a  {
+        background-color: #f9ad3e;
+    }
+
+    .nav-pills > li.active > a,
+    .nav-pills > li.active > a:hover,
+    .nav-pills > li.active > a:focus {
+        background-color: #f9ad3e;
+    }
+
+    a {
+        color: black;
+    }
+
+    .nav-fixed {
+        padding-top: 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background-color: white;
+        z-index: 1;
+        max-width: 870px;
+    }
+
+    .nav-fixed h3 {
+        float: left;
+    }
+
+    .spacer {
+        height: 80px;
+    }
+}
