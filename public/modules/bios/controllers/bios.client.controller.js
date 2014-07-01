@@ -5,6 +5,20 @@ angular.module('bios').controller('BiosController', ['$scope', '$stateParams', '
 	function($scope, $stateParams, $location, Authentication, Bios ) {
 		$scope.authentication = Authentication;
 
+        //logic to do when user clicks on bio
+        $scope.selectBio = function(bio){
+            //variable to keep track of currently clicked bio
+            $scope.clickedBioId = bio._id;
+
+            //store current bio name
+            $scope.displayBioName = bio.name;
+
+            //store current bio title
+            $scope.displayBioTitle = bio.title;
+
+            console.log(bio.number);
+        };
+
 		// Create new Bio
 		$scope.create = function() {
 			// Create new Bio object

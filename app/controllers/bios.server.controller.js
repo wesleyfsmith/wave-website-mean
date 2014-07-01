@@ -95,7 +95,7 @@ exports.delete = function(req, res) {
 /**
  * List of Bios
  */
-exports.list = function(req, res) { Bio.find().sort('-created').populate('user', 'displayName').exec(function(err, bios) {
+exports.list = function(req, res) { Bio.find().sort('+number').populate('user', 'displayName').exec(function(err, bios) {
 		if (err) {
 			return res.send(400, {
 				message: getErrorMessage(err)

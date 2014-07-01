@@ -2,14 +2,21 @@
     <div class="page-header">
         <h1>Bios</h1>
     </div>
-    <div class="list-group">
-        <a data-ng-repeat="bio in bios" data-ng-href="#!/bios/{{bio._id}}" class="list-group-item">
-			<h4 class="list-group-item-heading" data-ng-bind="bio.name"></h4>
-            <h5 data-ng-bind="bio.title"></h5>
-            <img data-ng-src="{{bio.photo}}"/>
-        </a>
+    <div>
+        <div class="bioHeadshotContainer">
+            <div data-ng-repeat="bio in bios" class="bioHeadshot">
+                <a data-ng-href="" data-ng-click="selectBio(bio)">
+                    <img data-ng-src="/modules/bios/img/{{bio.photo}}" data-ng-class="{grayscale: true, disabled: clickedBioId === bio._id}"/>
+                </a>
+            </div>
+        </div>
+
+        <div class="bioInfoContainer">
+            <h3 data-ng-bind="displayBioName"></h3>
+            <h4 data-ng-bind="displayBioTitle"></h4>
+        </div>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!bios.$resolved || bios.length">
-    	No Bios yet, why don't you <a href="/#!/bios/create">create one</a>?
+        No Bios yet, why don't you <a href="/#!/bios/create">create one</a>?
     </div>
 </section>

@@ -24,7 +24,6 @@ var BioSchema = new Schema({
     },
     photo: {
         type: String,
-        default: 'img/defaultavatar.png',
         required: true,
         trim: true
     },
@@ -32,6 +31,10 @@ var BioSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
+    number: {
+        type: Number,
+        required: true
+    },
     user: {
 		type: Schema.ObjectId,
 		ref: 'User'
@@ -47,19 +50,8 @@ Bio.remove(function(err, bio){
 
 });
 
-//populate
-var bioList = [];
-
-bioList.push(new Bio({
-    name: 'Wesley Smith',
-    title: 'Chief Development Officer & Founder',
-    photo: 'modules/bios/img/wesleysmithabout.png'
-}));
-
-for(var i = 0; i < bioList.length; i++){
-    bioList[i].save(function(err, bio){
-        if(err){
-            console.log(err);
-        }
-    });
+var bios = require('/home/macsj200/waveExports.json');
+for(var i = 0; i < bios.length; i++){
+    var bio = new Bio(bios[i]);
+    bio.save();
 }
