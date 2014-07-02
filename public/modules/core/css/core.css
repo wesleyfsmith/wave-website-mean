@@ -109,10 +109,6 @@ body {
         text-align: center;
     }
 
-    .selling-points p {
-
-    }
-
     .our-work {
         width: 100%;
         text-align: center;
@@ -184,8 +180,11 @@ body {
     .nav-fixed h3 {
         float: left;
     }
-
     .spacer {
         height: 80px;
+    }
+
+    img {
+        width: 80%;
     }
 }
