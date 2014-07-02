@@ -50,7 +50,7 @@ Bio.remove(function(err, bio){
 
 });
 
-var bios = require('/home/macsj200/waveExports.json');
+var bios = require('./waveExports.json');
 for(var i = 0; i < bios.length; i++){
     var bio = new Bio(bios[i]);
     bio.save();

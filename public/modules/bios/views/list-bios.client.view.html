@@ -3,6 +3,11 @@
         <h1>Bios</h1>
     </div>
     <div>
+        <div class="bioInfoContainer">
+            <h3 data-ng-bind="displayBioName"></h3>
+            <h4 data-ng-bind="displayBioTitle"></h4>
+        </div>
+
         <div class="bioHeadshotContainer">
             <div data-ng-repeat="bio in bios" class="bioHeadshot">
                 <a data-ng-href="" data-ng-click="selectBio(bio)">
@@ -11,10 +16,6 @@
             </div>
         </div>
 
-        <div class="bioInfoContainer">
-            <h3 data-ng-bind="displayBioName"></h3>
-            <h4 data-ng-bind="displayBioTitle"></h4>
-        </div>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!bios.$resolved || bios.length">
         No Bios yet, why don't you <a href="/#!/bios/create">create one</a>?

@@ -1,6 +1,7 @@
 .bioHeadshotContainer{
     float:left;
-    width:50%;
+    width:75%;
+    margin: 0 auto;
 }
 
 .bioInfoContainer{
@@ -10,8 +11,7 @@
 
 .bioHeadshot{
     float:left;
-    width: 50%;
-    padding: 5px 10px 5px 10px;
+    width: 33%;
 }
 
 /* Borrowed this bit from http://www.karlhorky.com/ */

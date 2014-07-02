@@ -15,8 +15,6 @@ angular.module('bios').controller('BiosController', ['$scope', '$stateParams', '
 
             //store current bio title
             $scope.displayBioTitle = bio.title;
-
-            console.log(bio.number);
         };
 
 		// Create new Bio
