@@ -187,4 +187,14 @@ body {
     img {
         width: 80%;
     }
+
+    .navbar-logo {
+        width: 100%;
+    }
+
+    .navbar-brand {
+        width: 20%;
+        float: left;
+    }
+
 }
