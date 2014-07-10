@@ -17,6 +17,10 @@ angular.module('bios').controller('BiosController', ['$scope', '$stateParams', '
             $scope.displayBioTitle = bio.title;
         };
 
+        $scope.isSelected = function(bioID) {
+          return $scope.clickedBioId === bioID;
+        };
+
 		// Create new Bio
 		$scope.create = function() {
 			// Create new Bio object

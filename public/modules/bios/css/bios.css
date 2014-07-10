@@ -1,17 +1,24 @@
-.bioHeadshotContainer{
-    float:left;
-    width:75%;
-    margin: 0 auto;
+.remove-highlight {
+    color: inherit !important;
 }
 
-.bioInfoContainer{
-    float:left;
-    width:50%;
+.bioHeadshotContainer{
+    text-align: center;
+    width:75%;
+    margin: 0 auto;
 }
 
 .bioHeadshot{
     float:left;
     width: 33%;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    width: 17%;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Borrowed this bit from http://www.karlhorky.com/ */
