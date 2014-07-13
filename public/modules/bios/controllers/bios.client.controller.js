@@ -69,6 +69,20 @@ angular.module('bios').controller('BiosController', ['$scope', '$stateParams', '
 		// Find a list of Bios
 		$scope.find = function() {
 			$scope.bios = Bios.query();
+
+            //create 2d array for easier col/rows
+            $scope.bioRows = [];
+
+            var tempArr;
+
+            for (var i = 0; i < $scope.bios; i++) {
+                //reset tempArr very third element
+                if (i % 3 === 0) {
+                    tempArr = [];
+                    $scope.bioRows.push(tempArr);
+                }
+                tempArr.push($scope.bios[i]);
+            }
 		};
 
 		// Find existing Bio

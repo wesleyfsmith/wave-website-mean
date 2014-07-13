@@ -89,7 +89,8 @@ body {
     /* Remove the bottom border on the jumbotron for visual effect */
     .jumbotron {
         border-bottom: 0;
-        background: url(../img/bus_main.jpeg) no-repeat center center fixed;
+        background: url(../img/brand/pad_in_lab.jpg) no-repeat center center fixed;
+        /*background: cornflowerblue;**/
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -98,21 +99,33 @@ body {
 
     /* Non-scaffold css */
 
-    .logo {
-        background: url(../img/brand/wave_logo.png) 50% 0 no-repeat fixed;
+    .jumbotron img {
+        margin-top: 100px;
     }
+
+    .jumbotron h1 {
+        color: white;
+        margin-top: 20px;
+    }
+
 
     .selling-points {
-        margin: 0 auto;
+        text-align: center;
         width: 100%;
+        margin: 100px auto;
     }
 
-    .selling-points .col-md-4 {
-        width: 33%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
+    .selling-point {
         text-align: center;
+        color: white;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .selling-point p {
+        font-size: 18px;
     }
 
     .our-work {

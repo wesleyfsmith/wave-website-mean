@@ -5,13 +5,14 @@
     <div>
 
         <div class="bioHeadshotContainer">
-            <div data-ng-repeat="bio in bios" class="bioHeadshot">
-                <a class="remove-highlight" data-ng-click="selectBio(bio)">
-                    <div class="overlay" data-ng-show="isSelected(bio._id)">
-                        <h3 data-ng-bind="displayBioName"></h3>
-                        <h4 data-ng-bind="displayBioTitle"></h4></div>
-                    <img data-ng-src="/modules/bios/img/{{bio.photo}}" data-ng-class="{grayscale: true, disabled: clickedBioId === bio._id}"/>
-                </a>
+            <div data-ng-repeat="bioRow in bioRows" class="row">
+                Hey
+                <!--<div data-ng-repeat="bio in bioRow" class="col-md-4"><a class="remove-highlight" data-ng-click="selectBio(bio)">-->
+                    <!--<div class="overlay" data-ng-show="isSelected(bio._id)">-->
+                        <!--<h3 data-ng-bind="displayBioName"></h3>-->
+                        <!--<h4 data-ng-bind="displayBioTitle"></h4></div>-->
+                    <!--<img data-ng-src="/modules/bios/img/{{bio.photo}}" data-ng-class="{grayscale: true, disabled: clickedBioId === bio._id}"/>-->
+                <!--</a></div>-->
             </div>
         </div>
 

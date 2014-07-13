@@ -8,11 +8,6 @@
     margin: 0 auto;
 }
 
-.bioHeadshot{
-    float:left;
-    width: 33%;
-}
-
 .overlay {
     position: absolute;
     z-index: 1;

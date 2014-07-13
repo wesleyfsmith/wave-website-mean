@@ -11,22 +11,17 @@
 	<nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
         <!-- Delete this stuff when we get menu service working -->
         <ul class="nav navbar-nav">
-            <li ui-route="/bios(/create)?" ng-class="{active: ($uiRoute)}" dropdown="true">
-                <a class="dropdown-toggle">
-                    <span>About</span>
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li ui-route="bios" ng-class="{active: $uiRoute}">
-                        <a href="/#!/bios">List Bios</a>
-                    </li>
-
-                    <li ui-route="bios/create" ng-class="{active: $uiRoute}">
-                        <a href="/#!/bios/create">New Bio</a>
-                    </li>
-                </ul>
+            <li ui-route="/bios" ng-class="{active: $uiRoute}">
+                <a href="/#!/bios">Our Team</a>
             </li>
         </ul>
+
+        <ul class="nav navbar-nav">
+            <li ui-route="/projects" ng-class="{active: $uiRoute}">
+                <a href="/#!/projects">Projects</a>
+            </li>
+        </ul>
+
         <!-- Delete this stuff when we get menu service working -->
 
 		<ul class="nav navbar-nav" data-ng-if="menu.shouldRender(authentication.user);">
