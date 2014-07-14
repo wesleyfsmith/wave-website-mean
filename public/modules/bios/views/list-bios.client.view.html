@@ -1,18 +1,21 @@
 <section data-ng-controller="BiosController" data-ng-init="find()">
     <div class="page-header">
-        <h1>Bios</h1>
+        <h1>Meet Our Team</h1>
+        <h3>
+            This is a subtitle. Here is a spot to put a brief blurb about how great the wave team is.
+        </h3>
     </div>
     <div>
 
         <div class="bioHeadshotContainer">
             <div data-ng-repeat="bioRow in bioRows" class="row">
-                Hey
-                <!--<div data-ng-repeat="bio in bioRow" class="col-md-4"><a class="remove-highlight" data-ng-click="selectBio(bio)">-->
-                    <!--<div class="overlay" data-ng-show="isSelected(bio._id)">-->
-                        <!--<h3 data-ng-bind="displayBioName"></h3>-->
-                        <!--<h4 data-ng-bind="displayBioTitle"></h4></div>-->
-                    <!--<img data-ng-src="/modules/bios/img/{{bio.photo}}" data-ng-class="{grayscale: true, disabled: clickedBioId === bio._id}"/>-->
-                <!--</a></div>-->
+                <div data-ng-repeat="bio in bioRow" class="col-md-4">
+                    <a class="remove-highlight" data-ng-mouseover="selectBio(bio)">
+                    <div class="overlay" data-ng-show="isSelected(bio._id)">
+                        <h3 data-ng-bind="displayBioName"></h3>
+                        <h4 data-ng-bind="displayBioTitle"></h4></div>
+                    <img data-ng-src="/modules/bios/img/{{bio.photo}}" data-ng-class="{grayscale: true, disabled: mouseOverBioId === bio._id}"/>
+                </a></div>
             </div>
         </div>
 
