@@ -1,0 +1,15 @@
+<section data-ng-controller="ProjectsController" data-ng-init="find()" class="container">
+    <div class="page-header">
+        <h1>Projects</h1>
+        <h3>Subtitle text about our super awesome projects.</h3>
+    </div>
+    <div class="row">
+        <a data-ng-repeat="project in projects" data-ng-href="#!/projects/{{project._id}}" class="list-group-item col-md-6">
+			<h1 class="project-overlay" data-ng-bind="project.name"></h1>
+            <img class="project-img" data-ng-src="{{randomPicture()}}"/>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!projects.$resolved || projects.length">
+    	No Projects yet, why don't you <a href="/#!/projects/create">create one</a>?
+    </div>
+</section>

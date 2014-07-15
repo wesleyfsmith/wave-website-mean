@@ -35,10 +35,6 @@
 	<!--Application CSS Files-->
 	{% for cssFile in cssFiles %}<link rel="stylesheet" href="{{cssFile}}">
 	{% endfor %}
-
-    <!-- Font awesome isn't being loaded in automatically, for some readon -->
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
-
 	<!-- HTML5 Shim -->
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -48,7 +44,7 @@
 <body class="ng-cloak">
 	<header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
 	<section class="content">
-		<section >
+		<section>
 			{% block content %}{% endblock %}
 		</section>
 	</section>

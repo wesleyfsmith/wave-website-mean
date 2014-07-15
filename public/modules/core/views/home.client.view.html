@@ -1,50 +1,41 @@
 <section data-ng-controller="HomeController">
     <div class="jumbotron">
-        <img src="modules/core/img/brand/wave_logo_white_cropped_text_only.png"/>
+        <div class="container">
+        <img class="imageLogo" src="modules/core/img/brand/wave24.png"/>
         <h1 class="sub">
             Solving the battery problem through wireless charging.
         </h1>
 
-        <div class="row selling-points">
+            <div class="row selling-points">
             <div class="col-md-4"><div class="selling-point">
                 <i class="fa fa-bolt fa-5x"></i>
                 <h2>Electric</h2>
-                <p>This will be some sample copy about why the electrical aspects of WAVE are simply top notch. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>This will be some sample copy about why the electrical aspects of WAVE are simply top notch.</p>
             </div></div>
             <div class="col-md-4"><div class="selling-point">
                 <i class="fa fa-globe fa-5x"></i>
                 <h2>Clean</h2>
-                <p>This will be some copy about how freakishly clean and environmental the wave system is. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>This will be some copy about how freakishly clean and environmental the wave system is.</p>
             </div></div>
             <div class="col-md-4">
                 <div class="selling-point">
                 <i class="fa fa-puzzle-piece fa-5x"></i>
                 <h2>Modular</h2>
-                <p>This will be some copy about how you can take a piece of WAVE, and then rule the world. Lorem ipsum dolor sit  amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>This will be some copy about how you can take a piece of WAVE, and then rule the world.</p>
             </div></div>
         </div>
     </div>
-
-    <div class="container">
-
-
-    <div class="row our-work">
-        <h2>Our Work</h2>
-        <iframe width="640" height="280" src="//www.youtube.com/embed/zRB16Z3FT3I" frameborder="0" allowfullscreen></iframe>
-        <div class="projects">
-            <div class="single-project">
-                This is some content.
-            </div>
-            <div class="single-project right-project">
-                This is some content.
-            </div>
-            <div class="single-project bottom-project">
-                This is some content.
-            </div>
-            <div class="single-project bottom-project right-project">
-                This is some content.
-            </div>
-        </div>
     </div>
+
+
+    <div class="container our-work">
+        <h2>What We Do</h2>
+        <iframe width="100%" height="570" src="//www.youtube.com/embed/zRB16Z3FT3I" frameborder="0" allowfullscreen></iframe>
+        <div class="row">
+            <a data-ng-repeat="project in projects" data-ng-href="#!/projects/{{project._id}}" class="list-group-item col-md-6">
+                <h1 class="project-overlay" data-ng-bind="project.name"></h1>
+                <img class="project-img" data-ng-src="{{randomPicture()}}"/>
+            </a>
+        </div>
     </div>
 </section>

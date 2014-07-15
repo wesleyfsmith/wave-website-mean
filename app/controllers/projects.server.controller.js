@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-	Bio = mongoose.model('Bio'),
+	Project = mongoose.model('Project'),
 	_ = require('lodash');
 
 /**
@@ -17,7 +17,7 @@ var getErrorMessage = function(err) {
 		switch (err.code) {
 			case 11000:
 			case 11001:
-				message = 'Bio already exists';
+				message = 'Project already exists';
 				break;
 			default:
 				message = 'Something went wrong';
@@ -32,97 +32,96 @@ var getErrorMessage = function(err) {
 };
 
 /**
- * Create a Bio
+ * Create a Project
  */
 exports.create = function(req, res) {
-	var bio = new Bio(req.body);
-	bio.user = req.user;
+	var project = new Project(req.body);
+	project.user = req.user;
 
-	bio.save(function(err) {
+	project.save(function(err) {
 		if (err) {
 			return res.send(400, {
 				message: getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(bio);
+			res.jsonp(project);
 		}
 	});
 };
 
 /**
- * Show the current Bio
+ * Show the current Project
  */
 exports.read = function(req, res) {
-	res.jsonp(req.bio);
+	res.jsonp(req.project);
 };
 
 /**
- * Update a Bio
+ * Update a Project
  */
 exports.update = function(req, res) {
-	var bio = req.bio ;
+	var project = req.project ;
 
-	bio = _.extend(bio , req.body);
+	project = _.extend(project , req.body);
 
-	bio.save(function(err) {
+	project.save(function(err) {
 		if (err) {
 			return res.send(400, {
 				message: getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(bio);
+			res.jsonp(project);
 		}
 	});
 };
 
 /**
- * Delete an Bio
+ * Delete an Project
  */
 exports.delete = function(req, res) {
-	var bio = req.bio ;
+	var project = req.project ;
 
-	bio.remove(function(err) {
+	project.remove(function(err) {
 		if (err) {
 			return res.send(400, {
 				message: getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(bio);
+			res.jsonp(project);
 		}
 	});
 };
 
 /**
- * List of Bios
+ * List of Projects
  */
-exports.list = function(req, res) { Bio.find().sort('+number').populate('user', 'displayName').exec(function(err, bios) {
+exports.list = function(req, res) { Project.find().sort('-created').populate('user', 'displayName').exec(function(err, projects) {
 		if (err) {
 			return res.send(400, {
 				message: getErrorMessage(err)
 			});
 		} else {
-			res.jsonp(bios);
+			res.jsonp(projects);
 		}
 	});
 };
 
 /**
- * Bio middleware
+ * Project middleware
  */
-exports.bioByID = function(req, res, next, id) {
-    Bio.findById(id).populate('user', 'displayName').exec(function(err, bio) {
+exports.projectByID = function(req, res, next, id) { Project.findById(id).populate('user', 'displayName').exec(function(err, project) {
 		if (err) return next(err);
-		if (! bio) return next(new Error('Failed to load Bio ' + id));
-		req.bio = bio ;
+		if (! project) return next(new Error('Failed to load Project ' + id));
+		req.project = project ;
 		next();
 	});
 };
 
 /**
- * Bio authorization middleware
+ * Project authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
-	if (req.bio.user.id !== req.user.id) {
+	if (req.project.user.id !== req.user.id) {
 		return res.send(403, 'User is not authorized');
 	}
 	next();
