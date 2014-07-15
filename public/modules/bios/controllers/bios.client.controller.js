@@ -92,7 +92,7 @@ angular.module('bios').controller('BiosController', ['$scope', '$stateParams', '
 		$scope.findOne = function() {
 			$scope.bio = Bios.get({ 
 				bioId: $stateParams.bioId
-			})
+			});
 		};
 	}
 ]);
