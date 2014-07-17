@@ -26,10 +26,7 @@ module.exports = {
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-                'public/lib/textAngular/src/textAngular.js',
-                'public/lib/textAngular/src/textAngularSetup.js',
-                'public/lib/rangy/*.js'
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js'
 			]
 		},
 		css: [
