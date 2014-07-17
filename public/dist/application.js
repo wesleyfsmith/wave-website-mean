@@ -4,6 +4,7 @@ var ApplicationConfiguration = function () {
     // Init module configuration options
     var applicationModuleName = 'wave-website';
     var applicationModuleVendorDependencies = [
+        'ngLocale',
         'ngResource',
         'ngCookies',
         'ngAnimate',
