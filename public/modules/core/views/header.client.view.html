@@ -22,6 +22,12 @@
             </li>
         </ul>
 
+        <ul class="nav navbar-nav">
+            <li ui-route="/stories" ng-class="{active: $uiRoute}">
+                <a href="/#!/stories">Buzz</a>
+            </li>
+        </ul>
+
         <!-- Delete this stuff when we get menu service working -->
 
 		<ul class="nav navbar-nav" data-ng-if="menu.shouldRender(authentication.user);">
