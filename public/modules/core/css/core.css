@@ -130,6 +130,9 @@ body {
 .selling-point {
     text-align: center;
     color: white;
+    background: rgb(0, 0, 0);
+    /*fallback color*/
+
     background: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     padding: 20px;
@@ -230,7 +233,7 @@ a {
 }
 
 .navbar .navbar-fixed-top .navbar-inverse {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
@@ -239,5 +242,5 @@ a {
 }
 
 .content {
-    margin: 0px;
+    margin: 0;
 }
