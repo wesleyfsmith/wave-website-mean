@@ -21,12 +21,16 @@
     z-index: 1;
     text-align: center;
     width: 100%;
+    background-color: rgb(0,0,0);
+    /*fallback color for browsers that do not rgba*/
+
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
 }
 
 .bioHeadshotContainer .col-md-4 {
-    padding: 0px;
+    /* remove px (zero should not have units)*/
+    padding: 0;
 }
 
 .bioHeadshotContainer .row .col-md-4 img {
