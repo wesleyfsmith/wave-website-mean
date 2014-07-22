@@ -11,6 +11,10 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
             file = $files[0];
         };
 
+        $scope.renderHtml = function(html_code){
+            return $sce.trustAsHtml(html_code);
+        };
+
 		// Create new Project
 		$scope.create = function($files) {
             //var file = $files[0];
@@ -22,7 +26,7 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
                 url: '/projects',
                 method: 'POST',
                 withCredentials:true,
-                data: {name: $scope.name},
+                data: {name: $scope.name, content: $scope.content},
                 file:file
             }).progress(function(evt) {
                 console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
