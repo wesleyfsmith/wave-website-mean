@@ -108,7 +108,8 @@ angular.module('core').service('Menus', [
 						title: menuItemTitle,
 						link: menuItemURL,
 						uiRoute: menuItemUIRoute || ('/' + menuItemURL),
-						isPublic: isPublic || this.menus[menuId].isPublic,
+                        //change this to default to false
+						isPublic: isPublic || false,
 						roles: roles || this.defaultRoles,
 						shouldRender: shouldRender
 					});
