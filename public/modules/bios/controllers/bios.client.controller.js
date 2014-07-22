@@ -38,7 +38,7 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
                 url: '/bios',
                 method: 'POST',
                 withCredentials:true,
-                data: {name: $scope.name, title: $scope.title},
+                data: {name: $scope.name, title: $scope.title, number: $scope.number},
                 file:file
             }).progress(function(evt) {
                 console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));

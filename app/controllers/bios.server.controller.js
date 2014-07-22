@@ -41,12 +41,14 @@ var getErrorMessage = function(err) {
 exports.create = function(req, res) {
     var tempName = '';
     var tempTitle = '';
+    var tempNumber = '';
 
     //create new form object
     var form = new formidable.IncomingForm();
     form.parse(req, function(err, fields, files){
         tempName = fields.name;
         tempTitle = fields.title;
+        tempNumber = fields.number;
     });
 
     form.on('end', function(fields, files){
@@ -70,6 +72,7 @@ exports.create = function(req, res) {
             req.body.photo = '/modules/core/img/' + file_name;
             req.body.name = tempName;
             req.body.title = tempTitle;
+            req.body.number = tempNumber;
 
             console.log(req.body);
 

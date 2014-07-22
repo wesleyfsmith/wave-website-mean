@@ -32,7 +32,8 @@ var BioSchema = new Schema({
 		default: Date.now
 	},
     number: {
-        type: Number
+        type: Number,
+        required:true
     },
     user: {
 		type: Schema.ObjectId,
