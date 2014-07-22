@@ -66,7 +66,7 @@ exports.create = function(req, res) {
 
         /* Create object after form uploads and file copies */
         (function(){
-            req.body.photoPath = file_name;
+            req.body.photoPath = '/modules/core/img/' + file_name;
             req.body.name = tempName;
             req.body.content = tempContent;
 

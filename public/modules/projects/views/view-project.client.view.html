@@ -6,9 +6,8 @@
     <div>
         <a data-ng-href="#!/projects/{{project._id}}" class="col-md-6">
             <h1 class="project-overlay" data-ng-bind="project.name"></h1>
-            <img class="project-img" data-ng-src="/modules/core/img/{{project.photoPath}}"/>
-        </a>
-        <p data-ng-bind="project.content"></p>
+            <img class="project-img" data-ng-src="{{project.photoPath}}"/> </a>
+        <div data-ng-bind-html="project.content"></div>
     </div>
 
 	<div class="pull-right" data-ng-show="authentication.user._id == project.user._id">

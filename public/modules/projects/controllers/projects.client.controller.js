@@ -91,20 +91,9 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
 
 		// Find existing Project
 		$scope.findOne = function() {
-			$scope.project = Projects.get({ 
+			$scope.project = Projects.get({
 				projectId: $stateParams.projectId
 			});
 		};
-
-        $scope.randomPicture = function() {
-            switch (Math.floor((Math.random() * 2) + 1)) {
-                case 1:
-                    return '/modules/core/img/bus.jpg';
-                case 2:
-                    return '/modules/core/img/bus_gray.jpg';
-                case 3:
-                    return '/modules/core/img/bus_main.jpeg';
-            }
-        };
 	}
 ]);

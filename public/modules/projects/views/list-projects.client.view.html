@@ -6,7 +6,7 @@
     <div class="row">
         <a data-ng-repeat="project in projects" data-ng-href="#!/projects/{{project._id}}" class="col-md-6">
 			<h1 class="project-overlay" data-ng-bind="project.name"></h1>
-            <img class="project-img" data-ng-src="/modules/core/img/{{project.photoPath}}"/>
+            <img class="project-img" data-ng-src="{{project.photoPath}}"/>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!projects.$resolved || projects.length">
