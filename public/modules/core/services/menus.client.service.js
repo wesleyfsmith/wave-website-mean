@@ -154,6 +154,7 @@ angular.module('core').service('Menus', [
 		};
 
 		//Adding the topbar menu
-		this.addMenu('topbar');
+        //Make topbar public
+		this.addMenu('topbar', true);
 	}
 ]);
