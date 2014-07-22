@@ -1,15 +1,42 @@
 'use strict';
 
 // Projects controller
-angular.module('projects').controller('ProjectsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Projects',
-	function($scope, $stateParams, $location, Authentication, Projects ) {
+angular.module('projects').controller('ProjectsController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Projects',
+	function($scope, $upload, $stateParams, $location, Authentication, Projects ) {
 		$scope.authentication = Authentication;
 
+        var file = '';
+
+        $scope.onFileSelect = function ($files){
+            file = $files[0];
+        };
+
 		// Create new Project
-		$scope.create = function() {
+		$scope.create = function($files) {
+            //var file = $files[0];
+            var storeName = this.name;
+
+            console.log($scope.myModelObj);
+            $scope.upload = $upload.upload({
+                url: '/projects',
+                method: 'POST',
+                withCredentials:true,
+                data: {name: $scope.name},
+                file:file
+            }).progress(function(evt) {
+                console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
+            }).success(function(data, status, headers, config) {
+                // file is uploaded successfully
+                console.log(data);
+                console.log('successful');
+            }).error(function(err){
+                console.log(err);
+            });
+
 			// Create new Project object
 			var project = new Projects ({
-				name: this.name
+				name: storeName,
+                photoPath: this.photoPath
 			});
 
 			// Redirect after save
@@ -21,6 +48,7 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$statePa
 
 			// Clear form fields
 			this.name = '';
+            this.photoPath = '';
 		};
 
 		// Remove existing Project

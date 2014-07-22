@@ -24,6 +24,9 @@ var ProjectSchema = new Schema({
 		type: Schema.ObjectId,
 		ref: 'User'
 	},
+    photoPath: {
+        type: String
+    },
     content: {
         type: String
     }
