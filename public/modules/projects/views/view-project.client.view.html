@@ -2,6 +2,15 @@
 	<div class="page-header">
 		<h1 data-ng-bind="project.name"></h1>
 	</div>
+
+    <div>
+        <a data-ng-href="#!/projects/{{project._id}}" class="col-md-6">
+            <h1 class="project-overlay" data-ng-bind="project.name"></h1>
+            <img class="project-img" data-ng-src="/modules/core/img/{{project.photoPath}}"/>
+        </a>
+        <p data-ng-bind="project.content"></p>
+    </div>
+
 	<div class="pull-right" data-ng-show="authentication.user._id == project.user._id">
 		<a class="btn btn-primary" href="/#!/projects/{{project._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
@@ -10,12 +19,4 @@
 			<i class="glyphicon glyphicon-trash"></i>
 		</a>
 	</div>
-	<small>
-		<em class="text-muted">
-			Posted on
-			<span data-ng-bind="project.created | date:'mediumDate'"></span>
-			by
-			<span data-ng-bind="project.user.displayName"></span>
-		</em>
-	</small>
 </section>
