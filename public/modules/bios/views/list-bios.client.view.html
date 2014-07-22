@@ -14,7 +14,7 @@
                     <div class="overlay" data-ng-show="isSelected(bio._id)">
                         <h3 data-ng-bind="displayBioName"></h3>
                         <h4 data-ng-bind="displayBioTitle"></h4></div>
-                    <img data-ng-src="/modules/bios/img/{{bio.photo}}" data-ng-class="{grayscale: true, disabled: mouseOverBioId === bio._id}"/>
+                    <img data-ng-src="{{bio.photo}}" data-ng-class="{grayscale: true, disabled: mouseOverBioId === bio._id}"/>
                 </a></div>
             </div>
         </div>

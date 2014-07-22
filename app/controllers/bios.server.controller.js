@@ -4,8 +4,12 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-	Bio = mongoose.model('Bio'),
-	_ = require('lodash');
+    Bio = mongoose.model('Bio'),
+    _ = require('lodash'),
+    formidable = require('formidable'),
+    util = require('util'),
+    fs = require('fs-extra');
+
 
 /**
  * Get the error message from error object
@@ -35,18 +39,55 @@ var getErrorMessage = function(err) {
  * Create a Bio
  */
 exports.create = function(req, res) {
-	var bio = new Bio(req.body);
-	bio.user = req.user;
+    var tempName = '';
+    var tempTitle = '';
 
-	bio.save(function(err) {
-		if (err) {
-			return res.send(400, {
-				message: getErrorMessage(err)
-			});
-		} else {
-			res.jsonp(bio);
-		}
-	});
+    //create new form object
+    var form = new formidable.IncomingForm();
+    form.parse(req, function(err, fields, files){
+        tempName = fields.name;
+        tempTitle = fields.title;
+    });
+
+    form.on('end', function(fields, files){
+        /* Temporary location of our uploaded file */
+        var temp_path = this.openedFiles[0].path;
+        /* The file name of the uploaded file */
+        var file_name = this.openedFiles[0].name;
+        /* Location where we want to copy the uploaded file */
+        var new_location = 'public/modules/core/img/';
+
+        fs.copy(temp_path, new_location + file_name, function(err) {
+            if (err) {
+                console.error(err);
+            } else {
+                console.log('success!');
+            }
+        });
+
+        /* Create object after form uploads and file copies */
+        (function(){
+            req.body.photo = '/modules/core/img/' + file_name;
+            req.body.name = tempName;
+            req.body.title = tempTitle;
+
+            console.log(req.body);
+
+            var bio = new Bio(req.body);
+            bio.user = req.user;
+
+            bio.save(function(err) {
+                if (err) {
+                    console.log(err);
+                    return res.send(400, {
+                        message: getErrorMessage(err)
+                    });
+                } else {
+                    res.jsonp(bio);
+                }
+            });
+        })();
+    });
 };
 
 /**

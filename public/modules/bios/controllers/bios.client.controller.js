@@ -1,9 +1,15 @@
 'use strict';
 
 // Bios controller
-angular.module('bios').controller('BiosController', ['$scope', '$stateParams', '$location', 'Authentication', 'Bios',
-	function($scope, $stateParams, $location, Authentication, Bios ) {
+angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Bios',
+	function($scope, $upload, $stateParams, $location, Authentication, Bios ) {
 		$scope.authentication = Authentication;
+
+        var file = '';
+
+        $scope.onFileSelect = function ($files){
+            file = $files[0];
+        };
 
         //logic to do when user clicks on bio
         $scope.selectBio = function(bio){
@@ -22,22 +28,31 @@ angular.module('bios').controller('BiosController', ['$scope', '$stateParams', '
         };
 
 		// Create new Bio
-		$scope.create = function() {
-			// Create new Bio object
-			var bio = new Bios ({
-				name: this.name
-			});
+		$scope.create = function($files) {
+            //var file = $files[0];
 
-			// Redirect after save
-			bio.$save(function(response) {
-				$location.path('bios/' + response._id);
-			}, function(errorResponse) {
-				$scope.error = errorResponse.data.message;
-			});
+            //server side can handle anything!!!
+            //#serverswag
+            console.log($scope.myModelObj);
+            $scope.upload = $upload.upload({
+                url: '/bios',
+                method: 'POST',
+                withCredentials:true,
+                data: {name: $scope.name, title: $scope.title},
+                file:file
+            }).progress(function(evt) {
+                console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
+            }).success(function(data, status, headers, config) {
+                // file is uploaded successfully
+                console.log(data);
+                console.log('successful');
 
-			// Clear form fields
-			this.name = '';
-		};
+                console.log('you should be redirected right about now');
+                $location.path('bios/' + data._id);
+            }).error(function(err){
+                $scope.error = err.data.message;
+            });
+        };
 
 		// Remove existing Bio
 		$scope.remove = function( bio ) {
