@@ -28,7 +28,11 @@ module.exports = {
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-                'public/lib/ng-file-upload/angular-file-upload.js'
+                'public/lib/ng-file-upload/angular-file-upload.js',
+                'public/lib/textAngular/src/textAngular-sanitize.js',
+                'public/lib/textAngular/src/textAngularSetup.js',
+                'public/lib/textAngular/src/textAngular.js',
+                'public/lib/rangy/rangy-core.js'
 			]
 		},
 		css: [

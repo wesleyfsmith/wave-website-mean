@@ -15,6 +15,7 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
 		$scope.create = function($files) {
             //var file = $files[0];
             var storeName = this.name;
+            var storeContent = this.content;
 
             console.log($scope.myModelObj);
             $scope.upload = $upload.upload({
@@ -36,7 +37,8 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
 			// Create new Project object
 			var project = new Projects ({
 				name: storeName,
-                photoPath: this.photoPath
+                photoPath: this.photoPath,
+                content: storeContent
 			});
 
 			// Redirect after save
