@@ -19,6 +19,8 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
 		$scope.create = function($files) {
             //var file = $files[0];
 
+            //server side can handle anything!!!
+            //#serverswag
             console.log($scope.myModelObj);
             $scope.upload = $upload.upload({
                 url: '/projects',
@@ -32,27 +34,12 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
                 // file is uploaded successfully
                 console.log(data);
                 console.log('successful');
+
+                console.log('you should be redirected right about now');
+                $location.path('projects/' + data._id);
             }).error(function(err){
-                console.log(err);
+                $scope.error = err.data.message;
             });
-
-			// Create new Project object
-			var project = new Projects ({
-				name: this.name,
-                photoPath: this.photoPath,
-                content: this.content
-			});
-
-			// Redirect after save
-			project.$save(function(response) {
-				$location.path('projects/' + response._id);
-			}, function(errorResponse) {
-				$scope.error = errorResponse.data.message;
-			});
-
-			// Clear form fields
-			this.name = '';
-            this.photoPath = '';
 		};
 
 		// Remove existing Project
