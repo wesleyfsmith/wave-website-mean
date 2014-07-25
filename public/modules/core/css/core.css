@@ -17,6 +17,14 @@ body {
     padding-bottom: 20px;
 }
 
+/*move edit buttons to look less stupid*/
+.edit-button-container{
+    position:absolute;
+    z-index:100;
+    bottom:0;
+}
+
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

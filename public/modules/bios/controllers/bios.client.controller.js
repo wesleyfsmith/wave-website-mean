@@ -5,10 +5,10 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 	function($scope, $upload, $stateParams, $location, Authentication, Bios ) {
 		$scope.authentication = Authentication;
 
-        var file = '';
+        $scope.file = '';
 
         $scope.onFileSelect = function ($files){
-            file = $files[0];
+            $scope.file = $files[0];
         };
 
         //logic to do when user clicks on bio
@@ -33,13 +33,12 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 
             //server side can handle anything!!!
             //#serverswag
-            console.log($scope.myModelObj);
             $scope.upload = $upload.upload({
                 url: '/bios',
                 method: 'POST',
                 withCredentials:true,
                 data: {name: $scope.name, title: $scope.title, number: $scope.number},
-                file:file
+                file:$scope.file
             }).progress(function(evt) {
                 console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
             }).success(function(data, status, headers, config) {
@@ -83,6 +82,7 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 
 		// Find a list of Bios
 		$scope.find = function() {
+            //todo wesley document this!!!
 			$scope.bios = Bios.query().$promise.then(
                 function(value) {
                     $scope.bioRows = [];
@@ -99,8 +99,6 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
             );
 
             //create 2d array for easier col/rows
-
-
 		};
 
 		// Find existing Bio

@@ -5,10 +5,8 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
 	function($scope, $upload, $stateParams, $location, Authentication, Projects ) {
 		$scope.authentication = Authentication;
 
-        var file = '';
-
         $scope.onFileSelect = function ($files){
-            file = $files[0];
+            $scope.file = $files[0];
         };
 
 		// Create new Project
@@ -17,13 +15,12 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
 
             //server side can handle anything!!!
             //#serverswag
-            console.log($scope.myModelObj);
             $scope.upload = $upload.upload({
                 url: '/projects',
                 method: 'POST',
                 withCredentials:true,
                 data: {name: $scope.name, content: $scope.content},
-                file:file
+                file:$scope.file
             }).progress(function(evt) {
                 console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
             }).success(function(data, status, headers, config) {
@@ -76,8 +73,6 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
 				projectId: $stateParams.projectId
 			});
 		};
-
-        $scope.count = 0;
 
         $scope.selectProject = function(project) {
             $scope.mouseOverProjectId = project._id;

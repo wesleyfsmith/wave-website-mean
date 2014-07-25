@@ -17,6 +17,16 @@
             <img class="project-img"
                  data-ng-src="{{project.photoPath}}"
                  />
+
+            <div class="edit-button-container pull-right" data-ng-show="authentication.user">
+                <a class="btn btn-primary" href="/#!/projects/{{project._id}}/edit">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
+                <!--todo fix reload issue after delete-->
+                <a class="btn btn-primary" data-ng-click="remove(project);">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </a>
+            </div>
         </a>
         </div>
     </div>
