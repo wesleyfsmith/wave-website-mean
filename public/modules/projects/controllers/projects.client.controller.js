@@ -11,10 +11,6 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
             file = $files[0];
         };
 
-        $scope.renderHtml = function(html_code){
-            return $sce.trustAsHtml(html_code);
-        };
-
 		// Create new Project
 		$scope.create = function($files) {
             //var file = $files[0];
