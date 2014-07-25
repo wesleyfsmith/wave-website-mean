@@ -81,20 +81,7 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
 			});
 		};
 
-
         $scope.count = 0;
-
-        $scope.randomPicture = function() {
-            return '/modules/core/img/bus.jpg';
-//            switch (Math.floor((Math.random() * 2) + 1)) {
-//                case 1:
-//                    return '/modules/core/img/bus.jpg';
-//                case 2:
-//                    return '/modules/core/img/bus_gray.jpg';
-//                case 3:
-//                    return '/modules/core/img/bus_main.jpeg';
-//            }
-        };
 
         $scope.selectProject = function(project) {
             $scope.mouseOverProjectId = project._id;
