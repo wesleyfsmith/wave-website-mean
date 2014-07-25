@@ -37,7 +37,7 @@ var getErrorMessage = function(err) {
  */
 exports.create = function(req, res) {
     formUpload.getFormSaveFiles({
-        folderPath: '/modules/core/img/',
+        folderPath: '/modules/projects/img/',
         formProps: {
             name:null,
             content:null

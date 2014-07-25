@@ -39,7 +39,7 @@ var getErrorMessage = function(err) {
 exports.create = function(req, res) {
     /* Create object after form uploads and file copies */
     formUpload.getFormSaveFiles({
-        folderPath: '/modules/core/img/',
+        folderPath: '/modules/bios/img/',
         formProps: {
             photo:null,
             name:null,
