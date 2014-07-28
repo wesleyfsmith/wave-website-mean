@@ -5,8 +5,7 @@
  */
 var mongoose = require('mongoose'),
     Project = mongoose.model('Project'),
-    _ = require('lodash'),
-    formUpload = require('./formUpload');
+    _ = require('lodash');
 
 /**
  * Get the error message from error object

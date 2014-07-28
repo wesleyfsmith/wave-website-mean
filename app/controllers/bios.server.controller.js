@@ -5,8 +5,7 @@
  */
 var mongoose = require('mongoose'),
     Bio = mongoose.model('Bio'),
-    _ = require('lodash'),
-    formUpload = require('./formUpload');
+    _ = require('lodash');
 
 
 /**
