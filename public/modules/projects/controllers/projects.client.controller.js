@@ -20,7 +20,7 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
                 method: 'POST',
                 withCredentials:true,
                 data: {name: $scope.name, content: $scope.content},
-                file:$scope.file
+                photoPath:$scope.file
             }).progress(function(evt) {
                 console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
             }).success(function(data, status, headers, config) {

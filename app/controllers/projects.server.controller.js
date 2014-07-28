@@ -44,13 +44,11 @@ exports.create = function(req, res) {
         }
     }, req, res, function(err, config, req, res){
         if(err){
-            console.log(err);
+            console.log(err.stack);
         } else {
             req.body.photoPath = config.folderPath + config.file_name;
             req.body.name = config.formProps.name;
             req.body.content = config.formProps.content;
-
-            console.log(req.body);
 
             var project = new Project(req.body);
             project.user = req.user;
