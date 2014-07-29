@@ -22,11 +22,6 @@ var BioSchema = new Schema({
         required: 'Please fill Title name',
         trim: true
     },
-    photo: {
-        type: String,
-        required: true,
-        trim: true
-    },
 	created: {
 		type: Date,
 		default: Date.now
@@ -38,7 +33,13 @@ var BioSchema = new Schema({
     user: {
 		type: Schema.ObjectId,
 		ref: 'User'
-	}
+	},
+    //don't know if this should be media or photo or what
+    //possibly later make this an array
+    medium: {
+        type: Schema.ObjectId,
+        ref: 'Medium'
+    }
 });
 
 var Bio = mongoose.model('Bio', BioSchema);

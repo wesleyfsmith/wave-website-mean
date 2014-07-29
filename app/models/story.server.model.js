@@ -23,7 +23,13 @@ var StorySchema = new Schema({
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
-	}
+	},
+    //don't know if this should be media or photo or what
+    //possibly later make this an array
+    medium: {
+        type: Schema.ObjectId,
+        ref: 'Medium'
+    }
 });
 
 mongoose.model('Story', StorySchema);

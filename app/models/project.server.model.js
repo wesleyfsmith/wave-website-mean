@@ -24,11 +24,14 @@ var ProjectSchema = new Schema({
 		type: Schema.ObjectId,
 		ref: 'User'
 	},
-    photoPath: {
-        type: String
-    },
     content: {
         type: String
+    },
+    //don't know if this should be media or photo or what
+    //possibly later make this an array
+    medium: {
+        type: Schema.ObjectId,
+        ref: 'Medium'
     }
 });
 

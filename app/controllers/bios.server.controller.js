@@ -36,37 +36,17 @@ var getErrorMessage = function(err) {
  * Create a Bio
  */
 exports.create = function(req, res) {
-    /* Create object after form uploads and file copies */
-    formUpload.getFormSaveFiles({
-        folderPath: '/modules/bios/img/',
-        formProps: {
-            photo:null,
-            name:null,
-            title:null,
-            number:null
-        }
-    }, req, res, function(err, config, req, res){
-        if(err){
+    var bio = new Bio(req.body);
+    bio.user = req.user;
+
+    bio.save(function(err) {
+        if (err) {
             console.log(err);
-        } else{
-            req.body.photo = config.folderPath + config.file_name;
-            req.body.name = config.formProps.name;
-            req.body.title = config.formProps.title;
-            req.body.number = config.formProps.number;
-
-            var bio = new Bio(req.body);
-            bio.user = req.user;
-
-            bio.save(function(err) {
-                if (err) {
-                    console.log(err);
-                    return res.send(400, {
-                        message: getErrorMessage(err)
-                    });
-                } else {
-                    res.jsonp(bio);
-                }
+            return res.send(400, {
+                message: getErrorMessage(err)
             });
+        } else {
+            res.jsonp(bio);
         }
     });
 };
@@ -117,7 +97,7 @@ exports.delete = function(req, res) {
 /**
  * List of Bios
  */
-exports.list = function(req, res) { Bio.find().sort('number').populate('user', 'displayName').exec(function(err, bios) {
+exports.list = function(req, res) { Bio.find().sort('number').populate('user', 'displayName').populate('medium', 'src').exec(function(err, bios) {
     if (err) {
         return res.send(400, {
             message: getErrorMessage(err)
