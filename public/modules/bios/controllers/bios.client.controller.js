@@ -9,6 +9,20 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 
         $scope.onFileSelect = function ($files){
             $scope.file = $files[0];
+
+            //server side can handle anything!!!
+            //#serverswag
+            $scope.upload = $upload.upload({
+                url: '/media',
+                method: 'POST',
+                data: {},
+                withCredentials:true,
+                file:$scope.file
+            }).success(function(data, status, headers, config) {
+                $scope.photo = data;
+            }).error(function(err){
+                $scope.error = err.data.message;
+            });
         };
 
         //logic to do when user clicks on bio
@@ -29,27 +43,17 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 
 		// Create new Bio
 		$scope.create = function($files) {
-            //var file = $files[0];
+            var bio = new Bios({
+                name:this.name,
+                title:this.title,
+                number:this.number,
+                medium:$scope.photo._id
+            });
 
-            //server side can handle anything!!!
-            //#serverswag
-            $scope.upload = $upload.upload({
-                url: '/bios',
-                method: 'POST',
-                withCredentials:true,
-                data: {name: $scope.name, title: $scope.title, number: $scope.number},
-                file:$scope.file
-            }).progress(function(evt) {
-                console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
-            }).success(function(data, status, headers, config) {
-                // file is uploaded successfully
-                console.log(data);
-                console.log('successful');
-
-                console.log('you should be redirected right about now');
-                $location.path('bios/' + data._id);
-            }).error(function(err){
-                $scope.error = err.data.message;
+            bio.$save(function(response) {
+                $location.path('bios/' + response._id);
+            }, function(errorResponse) {
+                $scope.error = errorResponse.data.message;
             });
         };
 
