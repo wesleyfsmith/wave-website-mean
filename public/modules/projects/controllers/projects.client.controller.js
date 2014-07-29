@@ -1,8 +1,8 @@
 'use strict';
 
 // Projects controller
-angular.module('projects').controller('ProjectsController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Projects',
-	function($scope, $upload, $stateParams, $location, Authentication, Projects ) {
+angular.module('projects').controller('ProjectsController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Projects', 'Media',
+	function($scope, $upload, $stateParams, $location, Authentication, Projects, Media ) {
 		$scope.authentication = Authentication;
 
         $scope.onFileSelect = function ($files){
@@ -11,16 +11,12 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
 
 		// Create new Project
 		$scope.create = function($files) {
-            //var file = $files[0];
 
-            //server side can handle anything!!!
-            //#serverswag
             $scope.upload = $upload.upload({
-                url: '/projects',
+                url: '/media',
                 method: 'POST',
-                withCredentials:true,
-                data: {name: $scope.name, content: $scope.content},
-                photoPath:$scope.file
+                withCredentials: true,
+                medium: $scope.file
             }).progress(function(evt) {
                 console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
             }).success(function(data, status, headers, config) {
@@ -29,10 +25,33 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
                 console.log('successful');
 
                 console.log('you should be redirected right about now');
-                $location.path('projects/' + data._id);
+//                $location.path('projects/' + data._id);
             }).error(function(err){
                 $scope.error = err.data.message;
             });
+
+            //var file = $files[0];
+
+            //server side can handle anything!!!
+            //#serverswag
+//            $scope.upload = $upload.upload({
+//                url: '/projects',
+//                method: 'POST',
+//                withCredentials:true,
+//                data: {name: $scope.name, content: $scope.content},
+//                photoPath:$scope.file
+//            }).progress(function(evt) {
+//                console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
+//            }).success(function(data, status, headers, config) {
+//                // file is uploaded successfully
+//                console.log(data);
+//                console.log('successful');
+//
+//                console.log('you should be redirected right about now');
+//                $location.path('projects/' + data._id);
+//            }).error(function(err){
+//                $scope.error = err.data.message;
+//            });
 		};
 
 		// Remove existing Project
