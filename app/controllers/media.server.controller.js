@@ -67,35 +67,6 @@ var getFormSaveFiles = function(req, res, medium, saveCallback) {
             }
         });
     });
-
-//    //todo let this support a buncha files
-//    form.on('end', function(name, file) {
-//        /* Temporary location of our uploaded file */
-////        var temp_path = this.openedFiles[0].path;
-//
-//        console.log('running properly up to here');
-//
-//        var temp_path = file.path;
-//
-//        /* The file name of the uploaded file */
-//        var file_name = medium._id;
-//
-//        var tmp = this.openedFiles[0].name.split('.');
-//
-//        var suffix = '.' + tmp[tmp.length - 1];
-//
-//        /* Location where we want to copy the uploaded file */
-//        var new_location = 'public/media/';
-//
-//        fs.copy(temp_path, new_location + file_name + suffix, function (err) {
-//            if (err) {
-//                saveCallback(err);
-//            } else {
-//                medium.src = '/media/' + file_name + suffix;
-//                saveCallback(null);
-//            }
-//        });
-//    });
 };
 
 /**

@@ -43,17 +43,3 @@ var BioSchema = new Schema({
 });
 
 var Bio = mongoose.model('Bio', BioSchema);
-
-////init server data
-
-//clear first
-//Bio.remove(function(err, bio){
-//
-//});
-//
-//var bios = require('./waveExports.json');
-//for(var i = 0; i < bios.length; i++){
-//    bios[i].photo = 'modules/bios/img/' + bios[i].photo;
-//    var bio = new Bio(bios[i]);
-//    bio.save();
-//}
