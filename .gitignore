@@ -7,3 +7,6 @@ node_modules/
 app/tests/coverage/
 .bower-*/
 .idea/
+public/media/*.png
+public/media/*.jpg
+
