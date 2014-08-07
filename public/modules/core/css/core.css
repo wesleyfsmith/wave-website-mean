@@ -97,8 +97,8 @@ body {
     /* Remove the bottom border on the jumbotron for visual effect */
     .jumbotron {
         border-bottom: 0;
-        /*background: url(../img/bus_gray.jpg) no-repeat center center fixed;*/
-        background: steelblue;
+        background: url(../img/brand/bg_bw_logo.jpg) 50%;
+        /*background: steelblue;*/
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -132,7 +132,7 @@ body {
 .selling-points {
     text-align: center;
     width: 100%;
-    margin:100px 50px auto auto;
+    margin: 400px 50px auto auto;
 }
 
 .selling-point {
@@ -169,7 +169,7 @@ body {
 }
 
 .selling-point i {
-    color: #eaffb0;
+    color: #F5B613;
 }
 
 /*.projects {*/
@@ -251,4 +251,10 @@ a {
 
 .content {
     margin: 0;
+}
+
+.jumbotron h1 {
+    margin-bottom: 200px;
+    color: #F5B613;
+    background: rgba(0, 0, 0, 0.4);
 }
