@@ -7,11 +7,12 @@ module.exports = function(app) {
 	// Media Routes
 	app.route('/media')
 		.get(media.list)
-		.post(users.requiresLogin, media.create);
+        // commented out to use postman (maybe actually necessary?)
+		.post(/*users.requiresLogin,*/ media.create);
 
 	app.route('/media/:mediumId')
 		.get(media.read)
-//		.put(users.requiresLogin, media.hasAuthorization, media.update) // removed because we don't like to update media!
+		.put(users.requiresLogin, media.hasAuthorization, media.update)
 		.delete(users.requiresLogin, media.hasAuthorization, media.delete);
 
 	// Finish by binding the Medium middleware
