@@ -264,3 +264,11 @@ a {
     color: #F5B613;
     background: rgba(0, 0, 0, 0.4);
 }
+
+.navbar-inverse {
+    background-color: black;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: black;
+}
