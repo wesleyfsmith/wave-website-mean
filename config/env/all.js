@@ -15,6 +15,7 @@ module.exports = {
 			css: [
 //				'public/lib/bootstrap/dist/css/bootstrap.css',
 //				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
+                'public/lib/bootswatch/flatly/bootstrap.css',
                 'public/lib/components-font-awesome/css/font-awesome.css'
 			],
 			js: [
@@ -32,7 +33,9 @@ module.exports = {
                 'public/lib/textAngular/src/textAngular-sanitize.js',
                 'public/lib/textAngular/src/textAngularSetup.js',
                 'public/lib/textAngular/src/textAngular.js',
-                'public/lib/rangy/rangy-core.js'
+                'public/lib/rangy/rangy-core.js',
+                'public/lib/jquery/dist/jquery.js',
+                'public/lib/ng-grid/build/ng-grid.js'
 			]
 		},
 		css: [

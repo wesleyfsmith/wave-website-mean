@@ -34,11 +34,13 @@ var BioSchema = new Schema({
 		type: Schema.ObjectId,
 		ref: 'User'
 	},
-    //don't know if this should be media or photo or what
-    //possibly later make this an array
-    medium: {
-        type: Schema.ObjectId,
-        ref: 'Medium'
+    photo: {
+        type: String,
+        required: 'Please select an image.'
+    },
+    team: {
+        type: [String],
+        required: 'Please select a team for this bio.'
     }
 });
 

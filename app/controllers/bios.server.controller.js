@@ -5,9 +5,7 @@
  */
 var mongoose = require('mongoose'),
     Bio = mongoose.model('Bio'),
-    _ = require('lodash'),
-    fs = require('fs-extra'),
-    Medium = mongoose.model('Medium');
+    _ = require('lodash');
 
 
 /**
@@ -100,55 +98,7 @@ exports.delete = function(req, res) {
  * List of Bios
  */
 exports.list = function(req, res) {
-    //init server data
-
-    //clear first
-    Bio.remove(function(err, bio){
-
-    });
-
-    var bios = require('./waveExports.json');
-    for(var i = 0; i < bios.length; i++){
-        var data = bios[i];
-
-        var medium = new Medium();
-
-        /* The file name of the uploaded file */
-        var file_name = medium._id;
-
-        var tmp = data.photo.split('.');
-
-        var suffix = '.' + tmp[tmp.length - 1];
-
-        /* Location where we want to copy the uploaded file */
-        var new_location = 'public/media/';
-
-        fs.copy('public/modules/bios/img/' + data.photo, new_location + file_name + suffix, function (err) {
-            if (err) {
-                console.log(err);
-            } else {
-                medium.src = '/media/' + file_name + suffix;
-
-                medium.save(function(err) {
-                    if (err) {
-                        console.log(err);
-                    } else {
-                        data.medium = medium._id;
-                        var bio = new Bio(data);
-                        bio.save(function(err) {
-                            if (err) {
-                                console.log(err);
-                            } else {
-
-                            }
-                        });
-                    }
-                });
-            }
-        });
-    }
-
-    Bio.find().sort('number').populate('user', 'displayName').populate('medium', 'src').exec(function(err, bios) {
+    Bio.find().sort('number').populate('user', 'displayName').exec(function(err, bios) {
         if (err) {
             return res.send(400, {
                 message: getErrorMessage(err)

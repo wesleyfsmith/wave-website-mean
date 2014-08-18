@@ -1,29 +1,41 @@
 'use strict';
 
 // Bios controller
-angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Bios',
-	function($scope, $upload, $stateParams, $location, Authentication, Bios ) {
+angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Bios', 'Uploads',
+	function($scope, $upload, $stateParams, $location, Authentication, Bios, Uploads ) {
 		$scope.authentication = Authentication;
 
-        $scope.file = '';
+        $scope.photo = '';
 
         $scope.onFileSelect = function ($files){
-            $scope.file = $files[0];
+            $scope.photo = $files[0];
 
             //server side can handle anything!!!
             //#serverswag
-            $scope.upload = $upload.upload({
-                url: '/media',
-                method: 'POST',
-                data: {},
-                withCredentials:true,
-                file:$scope.file
-            }).success(function(data, status, headers, config) {
-                $scope.photo = data;
-            }).error(function(err){
-                $scope.error = err.data.message;
-            });
+//            $scope.upload = $upload.upload({
+//                url: '/uploads',
+//                method: 'POST',
+//                data: {},
+//                withCredentials: true,
+//                file: $scope.file
+//            }).success(function(data, status, headers, config) {
+//                $scope.photo = data.files[0].url;
+//            }).error(function(err){
+//                $scope.error = err.data.message;
+//            });
+
+
+
         };
+
+
+        $scope.teamList = [];
+
+        $scope.addTeam = function(team) {
+            $scope.teamList.push(team);
+        };
+
+        $scope.removeTeam = function()
 
         //logic to do when user clicks on bio
         $scope.selectBio = function(bio){
@@ -42,19 +54,28 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
         };
 
 		// Create new Bio
-		$scope.create = function($files) {
+		$scope.create = function() {
             var bio = new Bios({
-                name:this.name,
-                title:this.title,
-                number:this.number,
-                medium:$scope.photo._id
+                name: this.name,
+                title: this.title,
+                number: this.number
             });
 
-            bio.$save(function(response) {
-                $location.path('bios/' + response._id);
-            }, function(errorResponse) {
+            var errorFunction = function(errorResponse) {
                 $scope.error = errorResponse.data.message;
-            });
+            };
+
+            Uploads.upload($scope.photo).success(function(data) {
+                bio.photo = data.files[0].url;
+                bio.$save(function(response) {
+                    $location.path('bios/' + response._id);
+                }, errorFunction);
+            }).error(errorFunction);
+
+			// Clear form fields
+			this.name = '';
+            this.title = '';
+            this.number = '';
         };
 
 		// Remove existing Bio
@@ -84,23 +105,14 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 			});
 		};
 
+
+        $scope.bios = [];
+        $scope.gridData = { data: 'bios'};
+
 		// Find a list of Bios
 		$scope.find = function() {
             //todo wesley document this!!!
-			$scope.bios = Bios.query().$promise.then(
-                function(value) {
-                    $scope.bioRows = [];
-                    var tempArr;
-                    for (var i = 0; i < value.length; i++) {
-                        //reset tempArr very third element
-                        if (i % 3 === 0) {
-                            tempArr = [];
-                            $scope.bioRows.push(tempArr);
-                        }
-                        tempArr.push(value[i]);
-                    }
-                }
-            );
+			$scope.bios = Bios.query();
 
             //create 2d array for easier col/rows
 		};

@@ -94,7 +94,7 @@ exports.delete = function(req, res) {
 /**
  * List of Projects
  */
-exports.list = function(req, res) { Project.find().sort('-created').populate('user', 'displayName').populate('medium', 'src').exec(function(err, projects) {
+exports.list = function(req, res) { Project.find().sort('-created').populate('user', 'displayName').exec(function(err, projects) {
     if (err) {
         return res.send(400, {
             message: getErrorMessage(err)

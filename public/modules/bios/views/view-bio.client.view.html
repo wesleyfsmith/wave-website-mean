@@ -3,7 +3,7 @@
 		<h1 data-ng-bind="bio.name"></h1>
 	</div>
 	<div class="pull-right" data-ng-show="authentication.user._id == bio.user._id">
-        <img data-ng-src="{{bio.medium.src}}"/>
+        <img data-ng-src="{{bio.photo}}"/>
 		<a class="btn btn-primary" href="/#!/bios/{{bio._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>

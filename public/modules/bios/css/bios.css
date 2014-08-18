@@ -8,7 +8,7 @@
 
 .bioHeadshotContainer{
     text-align: center;
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -33,7 +33,7 @@
     padding: 0;
 }
 
-.bioHeadshotContainer .row .col-md-4 img {
+.bioHeadshotContainer img {
     overflow: hidden;
     width: 100%;
     height: 100%;
