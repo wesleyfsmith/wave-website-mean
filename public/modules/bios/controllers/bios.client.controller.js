@@ -35,7 +35,9 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
             $scope.teamList.push(team);
         };
 
-        $scope.removeTeam = function()
+        $scope.removeTeam = function(team) {
+
+        };
 
         //logic to do when user clicks on bio
         $scope.selectBio = function(bio){
