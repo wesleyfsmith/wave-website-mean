@@ -36,7 +36,8 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
         };
 
         $scope.removeTeam = function(team) {
-
+            var index = $scope.teamList.indexOf(team);
+            $scope.teamList.splice(index, 1);
         };
 
         //logic to do when user clicks on bio
