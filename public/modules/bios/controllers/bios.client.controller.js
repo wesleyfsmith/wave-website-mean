@@ -28,16 +28,18 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 
         };
 
+        $scope.bioTeams = [];
 
-        $scope.teamList = [];
+        $scope.teams = ['Executive', 'Board of Directors', 'Power Electronics Engineering', 'Software Engineering', 'Mechanical', 'Manufacturing Engineering'];
 
-        $scope.addTeam = function(team) {
-            $scope.teamList.push(team);
-        };
-
-        $scope.removeTeam = function(team) {
-            var index = $scope.teamList.indexOf(team);
-            $scope.teamList.splice(index, 1);
+        $scope.toggleTeamOnBio = function(team) {
+            if ($scope.bioTeams.indexOf(team) === -1) {
+                $scope.bioTeams.push(team);
+            } else {
+                var index = $scope.bioTeams.indexOf(team);
+                $scope.bioTeams.splice(index, 1);
+            }
+            console.log($scope.bioTeams);
         };
 
         //logic to do when user clicks on bio
@@ -61,6 +63,7 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
             var bio = new Bios({
                 name: this.name,
                 title: this.title,
+                teams: $scope.bioTeams
             });
 
             var errorFunction = function(errorResponse) {
@@ -77,6 +80,7 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 			// Clear form fields
 			this.name = '';
             this.title = '';
+            $scope.bioTeams = [];
         };
 
 		// Remove existing Bio
