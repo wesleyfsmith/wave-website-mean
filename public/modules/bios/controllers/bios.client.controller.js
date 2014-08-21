@@ -61,7 +61,6 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
             var bio = new Bios({
                 name: this.name,
                 title: this.title,
-                number: this.number
             });
 
             var errorFunction = function(errorResponse) {
@@ -78,7 +77,6 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 			// Clear form fields
 			this.name = '';
             this.title = '';
-            this.number = '';
         };
 
 		// Remove existing Bio
