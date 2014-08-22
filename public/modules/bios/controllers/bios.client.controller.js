@@ -1,8 +1,8 @@
 'use strict';
 
 // Bios controller
-angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Bios', 'Uploads',
-	function($scope, $upload, $stateParams, $location, Authentication, Bios, Uploads ) {
+angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Bios', 'Uploads', 'Teams',
+	function($scope, $upload, $stateParams, $location, Authentication, Bios, Uploads, Teams ) {
 		$scope.authentication = Authentication;
 
         $scope.photo = '';
@@ -28,18 +28,21 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 
         };
 
-        $scope.bioTeams = [];
-
-        $scope.teams = ['Executive', 'Board of Directors', 'Power Electronics Engineering', 'Software Engineering', 'Mechanical', 'Manufacturing Engineering'];
+        //initialize the bio teams
 
         $scope.toggleTeamOnBio = function(team) {
-            if ($scope.bioTeams.indexOf(team) === -1) {
-                $scope.bioTeams.push(team);
+            if ($scope.arrayContains(team)) {
+                $scope.teams[team] = false;
             } else {
-                var index = $scope.bioTeams.indexOf(team);
-                $scope.bioTeams.splice(index, 1);
+                $scope.teams[team] = true;
             }
-            console.log($scope.bioTeams);
+        };
+
+        $scope.arrayContains = function(array, value) {
+            if (array.indexOf(value) === -1) {
+                return false;
+            }
+            return true;
         };
 
         //logic to do when user clicks on bio
@@ -63,7 +66,7 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
             var bio = new Bios({
                 name: this.name,
                 title: this.title,
-                teams: $scope.bioTeams
+                teams: $scope.teams
             });
 
             var errorFunction = function(errorResponse) {
@@ -80,7 +83,6 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 			// Clear form fields
 			this.name = '';
             this.title = '';
-            $scope.bioTeams = [];
         };
 
 		// Remove existing Bio
@@ -107,19 +109,25 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
                 $scope.error = errorResponse.data.message;
             };
 
-            Uploads.delete(project.photo).sucess(function(data) {
+            Uploads.delete(bio.photo).success(function(data) {
                 bio.$update(function() {
                     $location.path('bios/' + bio._id);
                 }, errorFunction);
             }).error(errorFunction);
 		};
 
+        $scope.teams = Teams.query();
 
-        $scope.bios = [];
-        $scope.gridData = { data: 'bios'};
-
-		// Find a list of Bios
+        // Find a list of Bios
 		$scope.find = function() {
+
+
+//                .success(function(data) {
+//                for (var team in data) {
+//                    $scope.teams[team] = false;
+//                }
+//            });
+
             //todo wesley document this!!!
 			$scope.bios = Bios.query();
 
@@ -130,7 +138,15 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 		$scope.findOne = function() {
 			$scope.bio = Bios.get({ 
 				bioId: $stateParams.bioId
-			});
+			}).success(function(bio) {
+                //assign teams correctly
+                for (var team in $scope.teams) {
+                    if ($scope.arrayContains(bio.teams, team)) {
+                        $scope.teams[team] = true;
+                    }
+                }
+            });
+
 		};
 	}
 ]);

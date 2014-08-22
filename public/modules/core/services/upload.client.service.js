@@ -1,8 +1,8 @@
 'use strict';
 
 //Menu service used for managing  menus
-angular.module('core').service('Uploads', ['$upload',
-    function($upload) {
+angular.module('core').service('Uploads', ['$upload', '$http',
+    function($upload, $http) {
         this.upload = function(filePath) {
             return $upload.upload({
                 url: '/uploads',
