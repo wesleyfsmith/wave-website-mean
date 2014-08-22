@@ -94,7 +94,7 @@ body {
     background: rgb(0, 0, 0);
     /*fallback color*/
 
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     padding: 20px;
     margin: 0 auto;
@@ -122,7 +122,7 @@ body {
 }
 
 .selling-point i {
-    color: #F5B613;
+    color: white;
 }
 
 /*.projects {*/

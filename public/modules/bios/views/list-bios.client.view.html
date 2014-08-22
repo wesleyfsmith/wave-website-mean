@@ -24,8 +24,8 @@
         <div class="col-md-7">
             <div class="bioHeadshotContainer col-md-4" data-ng-repeat="bio in bios" popover-title="{{displayBioTitle}}"
                  popover="{{displayBioName}}" popover-trigger="mouseenter" popover-animation="true">
-                <div>
-                    <a class="remove-highlight text-center" data-ng-mouseover="selectBio(bio)" >
+                <div data-ng-mouseover="selectBio(bio)" >
+                    <a class="remove-highlight text-center">
                         <!--<div class="overlay" data-ng-show="isSelected(bio._id)">-->
                             <!--<h3 data-ng-bind="displayBioName"></h3>-->
                             <!--<h4 data-ng-bind="displayBioTitle"></h4>-->

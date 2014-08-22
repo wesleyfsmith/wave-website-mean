@@ -6,12 +6,6 @@
     color: inherit !important;
 }
 
-.bioHeadshotContainer{
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-}
-
 .bioRow {
     height: 300px;
 }
@@ -28,16 +22,18 @@
     color: white;
 }
 
-.bioHeadshotContainer .col-md-4 {
+.col-md-7 .col-md-4 {
     /* remove px (zero should not have units)*/
     padding: 0;
 }
 
 .bioHeadshotContainer img {
     overflow: hidden;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 100%;
+}
+
+.bioHeadshotContainer a {
+    height: 100%;
 }
 
 /* Borrowed this bit from http://www.karlhorky.com/ */
