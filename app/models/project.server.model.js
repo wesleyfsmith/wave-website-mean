@@ -25,7 +25,8 @@ var ProjectSchema = new Schema({
 		ref: 'User'
 	},
     content: {
-        type: String
+        type: String,
+        required: 'Please fill in content.'
     },
     photo: {
         type: String,

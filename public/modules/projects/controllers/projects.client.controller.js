@@ -1,58 +1,13 @@
 'use strict';
 
 // Projects controller
-angular.module('projects').controller('ProjectsController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Projects', 'Media',
-	function($scope, $upload, $stateParams, $location, Authentication, Projects, Media ) {
+angular.module('projects').controller('ProjectsController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Projects', 'Media', 'Uploads',
+	function($scope, $upload, $stateParams, $location, Authentication, Projects, Media, Uploads ) {
 		$scope.authentication = Authentication;
 
         $scope.onFileSelect = function ($files){
-            $scope.file = $files[0];
+            $scope.photoPath = $files[0];
         };
-
-		// Create new Project
-		$scope.create = function($files) {
-
-            $scope.upload = $upload.upload({
-                url: '/media',
-                method: 'POST',
-                withCredentials: true,
-                medium: $scope.file
-            }).progress(function(evt) {
-                console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
-            }).success(function(data, status, headers, config) {
-                // file is uploaded successfully
-                console.log(data);
-                console.log('successful');
-
-                console.log('you should be redirected right about now');
-//                $location.path('projects/' + data._id);
-            }).error(function(err){
-                $scope.error = err.data.message;
-            });
-
-            //var file = $files[0];
-
-            //server side can handle anything!!!
-            //#serverswag
-//            $scope.upload = $upload.upload({
-//                url: '/projects',
-//                method: 'POST',
-//                withCredentials:true,
-//                data: {name: $scope.name, content: $scope.content},
-//                photoPath:$scope.file
-//            }).progress(function(evt) {
-//                console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
-//            }).success(function(data, status, headers, config) {
-//                // file is uploaded successfully
-//                console.log(data);
-//                console.log('successful');
-//
-//                console.log('you should be redirected right about now');
-//                $location.path('projects/' + data._id);
-//            }).error(function(err){
-//                $scope.error = err.data.message;
-//            });
-		};
 
 		// Remove existing Project
 		$scope.remove = function( project ) {
@@ -72,14 +27,42 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
 
 		// Update existing Project
 		$scope.update = function() {
-			var project = $scope.project ;
+			var project = $scope.project;
 
-			project.$update(function() {
-				$location.path('projects/' + project._id);
-			}, function(errorResponse) {
-				$scope.error = errorResponse.data.message;
-			});
+            var errorFunction = function(errorResponse) {
+                $scope.error = errorResponse.data.message;
+            };
+
+            Uploads.upload($scope.photo).success(function(data) {
+                project.$update(function() {
+                    $location.path('projects/' + project._id);
+                }, errorFunction);
+            }).error(errorFunction);
 		};
+
+
+        $scope.create = function() {
+            var project = new Projects({
+                name: this.name,
+                content: this.content
+            });
+
+            var errorFunction = function(errorResponse) {
+                $scope.error = errorResponse.data.message;
+            };
+
+            Uploads.upload($scope.photoPath).success(function(data) {
+                project.photo = data.files[0].url;
+                project.$save(function(response) {
+                    $location.path('projects/' + response._id);
+                }, errorFunction);
+            }).error(errorFunction);
+
+            // Clear form fields
+            this.name = '';
+            this.content = '';
+            $scope.photoPath = '';
+        };
 
 		// Find a list of Projects
 		$scope.find = function() {
