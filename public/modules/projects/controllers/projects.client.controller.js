@@ -33,7 +33,7 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
                 $scope.error = errorResponse.data.message;
             };
 
-            Uploads.delete($scope.photo).success(function(data) {
+            Uploads.delete(project.photo).success(function(data) {
                 project.$update(function() {
                     $location.path('projects/' + project._id);
                 }, errorFunction);

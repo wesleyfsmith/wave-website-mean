@@ -103,11 +103,15 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 		$scope.update = function() {
 			var bio = $scope.bio ;
 
-			bio.$update(function() {
-				$location.path('bios/' + bio._id);
-			}, function(errorResponse) {
-				$scope.error = errorResponse.data.message;
-			});
+            var errorFunction = function(errorResponse) {
+                $scope.error = errorResponse.data.message;
+            };
+
+            Uploads.delete(project.photo).sucess(function(data) {
+                bio.$update(function() {
+                    $location.path('bios/' + bio._id);
+                }, errorFunction);
+            }).error(errorFunction);
 		};
 
 
