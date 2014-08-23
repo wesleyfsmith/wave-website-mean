@@ -6,7 +6,7 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
 		$scope.authentication = Authentication;
 
         $scope.onFileSelect = function ($files){
-            $scope.photoPath = $files[0];
+            $scope.photo = $files[0];
         };
 
 		// Remove existing Project
@@ -34,12 +34,14 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
             };
 
             Uploads.delete(project.photo).success(function(data) {
-                project.$update(function() {
-                    $location.path('projects/' + project._id);
-                }, errorFunction);
+                Uploads.upload($scope.photo).success(function(data) {
+                    project.photo = data.files[0].url;
+                    project.$update(function() {
+                        $location.path('projects/' + project._id);
+                    }, errorFunction);
+                }).error(errorFunction);
             }).error(errorFunction);
 		};
-
 
         $scope.create = function() {
             var project = new Projects({
@@ -51,7 +53,7 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
                 $scope.error = errorResponse.data.message;
             };
 
-            Uploads.upload($scope.photoPath).success(function(data) {
+            Uploads.upload($scope.photo).success(function(data) {
                 project.photo = data.files[0].url;
                 project.$save(function(response) {
                     $location.path('projects/' + response._id);
@@ -61,7 +63,7 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
             // Clear form fields
             this.name = '';
             this.content = '';
-            $scope.photoPath = '';
+            $scope.photo = '';
         };
 
 		// Find a list of Projects
