@@ -1,4 +1,4 @@
-<section data-ng-controller="BiosController" class="container">
+<section data-ng-controller="BiosController" class="container" data-ng-init="initSelectedTeams()">
     <div class="page-header">
         <h1>New Bio</h1>
     </div>
@@ -21,8 +21,8 @@
 
                 <label class="control-label">Team</label>
                 <div>
-                    <label data-ng-repeat="team in teams" class="col-md-12">
-                        <input type="checkbox" value="{{team}}" data-ng-click="toggleTeamOnBio(team)">
+                    <label data-ng-repeat="(team, isSelected) in selectedTeams" class="col-md-12">
+                        <input type="checkbox" data-ng-model="selectedTeams[team]">
                         {{team}}
                     </label>
                 </div>

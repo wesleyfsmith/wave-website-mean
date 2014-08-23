@@ -13,7 +13,7 @@ angular.module('core').service('Uploads', ['$upload', '$http',
             });
         };
         this.delete = function(uploadUrl) {
-            return $http.delete('/uploads/' + uploadUrl);
+            return $http.delete(uploadUrl);
         };
     }
 ]);

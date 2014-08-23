@@ -1,19 +1,54 @@
 'use strict';
 
 // Bios controller
-angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Bios', 'Uploads', 'Teams',
-	function($scope, $upload, $stateParams, $location, Authentication, Bios, Uploads, Teams ) {
+angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Bios', 'Uploads',
+	function($scope, $upload, $stateParams, $location, Authentication, Bios, Uploads) {
 		$scope.authentication = Authentication;
 
         $scope.onFileSelect = function ($files){
             $scope.photo = $files[0];
         };
 
-        $scope.arrayContains = function(array, value) {
+        $scope.initSelectedTeams = function() {
+            var selectedTeams = {};
+            selectedTeams['Executive'] = false;
+            selectedTeams['Board of Directors'] = false;
+            selectedTeams['Power Electronics Engineering'] = false;
+            selectedTeams['Software Engineering'] = false;
+            selectedTeams['Mechanical Engineering'] = false;
+            selectedTeams['Manufacturing Engineering'] = false;
+
+            $scope.selectedTeams = selectedTeams;
+        };
+
+        var arrayContains = function(array, value) {
             if (array.indexOf(value) === -1) {
                 return false;
             }
             return true;
+        };
+
+        var readTeamsFromBioToSelected = function(bio) {
+            for (var team in $scope.selectedTeams) {
+                if (arrayContains(bio.teams, team)) {
+                    $scope.selectedTeams[team] = true;
+                }
+            }
+        };
+
+        var addSelectedTeamsToBio = function(bio) {
+            for (var team in $scope.selectedTeams) {
+                //they've added a team that the bio didn't belong to already
+                if ($scope.selectedTeams[team] === true) {
+                    if (!arrayContains(bio.teams, team)) {
+                        bio.teams.push(team);
+                    }
+                } else if (arrayContains(bio.teams, team)) {
+                    //they have the team and it should be removed
+                    var index = bio.teams.indexOf(team);
+                    bio.teams.splice(index, 1);
+                }
+            }
         };
 
         //logic to do when user clicks on bio MOVE TO DIRECTIVE
@@ -38,6 +73,8 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
                 name: this.name,
                 title: this.title
             });
+
+            addSelectedTeamsToBio(bio);
 
             var errorFunction = function(errorResponse) {
                 $scope.error = errorResponse.data.message;
@@ -79,14 +116,16 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
                 $scope.error = errorResponse.data.message;
             };
 
+            //delete old photo and upload new one
             Uploads.delete(bio.photo).success(function(data) {
-                bio.$update(function() {
-                    $location.path('bios/' + bio._id);
-                }, errorFunction);
+                Uploads.upload($scope.photo).success(function(data) {
+                    bio.photo = data.files[0].url;
+                    bio.$update(function() {
+                        $location.path('bios/' + bio._id);
+                    }, errorFunction);
+                }).error(errorFunction);
             }).error(errorFunction);
 		};
-
-        $scope.teams = Teams.query();
 
         // Find a list of Bios
 		$scope.find = function() {
@@ -95,9 +134,14 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 
 		// Find existing Bio
 		$scope.findOne = function() {
-			$scope.bio = Bios.get({ 
+
+            $scope.initSelectedTeams();
+
+            $scope.bio = Bios.get({
 				bioId: $stateParams.bioId
-			});
+			}, function(bio) {
+                readTeamsFromBioToSelected(bio);
+            });
 		};
 	}
 ]);

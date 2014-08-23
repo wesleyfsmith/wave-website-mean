@@ -21,8 +21,8 @@
 
                 <label class="control-label">Team</label>
                 <div>
-                    <label data-ng-repeat="team in teams" class="col-md-12">
-                        <input type="checkbox" value="{{team}}" data-ng-click="toggleTeamOnBio(team)" data-ng-model="{{bio[teams].indexOf(team) !== -1}}">
+                    <label data-ng-repeat="(team, isSelected) in selectedTeams" class="col-md-12">
+                        <input type="checkbox" data-ng-model="selectedTeams[team]">
                         {{team}}
                     </label>
                 </div>
