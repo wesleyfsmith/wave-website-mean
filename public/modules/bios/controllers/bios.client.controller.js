@@ -135,7 +135,29 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 
         // Find a list of Bios
 		$scope.find = function() {
-			$scope.bios = Bios.query();
+
+            //sort them
+
+            var bioBuckets = {};
+
+            bioBuckets['Executive'] = [];
+            bioBuckets['Board of Directors'] = [];
+            bioBuckets['Power Electronics Engineering'] = [];
+            bioBuckets['Software Engineering'] = [];
+            bioBuckets['Mechanical Engineering'] = [];
+            bioBuckets['Manufacturing Engineering'] = [];
+
+            $scope.bios = Bios.query().$promise.then(function(bios) {
+                for (var i = 0; i < bios.length; i++) {
+                    for (var j = 0; j < bios[i].teams.length; j++) {
+                        bioBuckets[bios[i].teams[j]].push(bios[i]);
+                    }
+                }
+            });
+
+            $scope.bioBuckets = bioBuckets;
+
+
 		};
 
 		// Find existing Bio
