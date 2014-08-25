@@ -71,7 +71,8 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 		$scope.create = function() {
             var bio = new Bios({
                 name: this.name,
-                title: this.title
+                title: this.title,
+                teams: []
             });
 
             addSelectedTeamsToBio(bio);
@@ -116,15 +117,12 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
                 $scope.error = errorResponse.data.message;
             };
 
-            //delete old photo and upload new one
-            Uploads.delete(bio.photo).success(function(data) {
-                Uploads.upload($scope.photo).success(function(data) {
-                    bio.photo = data.files[0].url;
-                    bio.$update(function() {
-                        $location.path('bios/' + bio._id);
-                    }, errorFunction);
-                }).error(errorFunction);
-            }).error(errorFunction);
+            Uploads.updatePhoto(bio.photo, $scope.photo, bio);
+
+            bio.$update(function() {
+                $location.path('bios/' + bio._id);
+            }, errorFunction);
+
 		};
 
         // Find a list of Bios
