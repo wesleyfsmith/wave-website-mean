@@ -63,3 +63,8 @@ img.grayscale.disabled {
 .popover-title {
     text-align: center;
 }
+
+.row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
