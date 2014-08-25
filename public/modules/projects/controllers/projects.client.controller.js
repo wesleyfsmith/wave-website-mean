@@ -1,8 +1,8 @@
 'use strict';
 
 // Projects controller
-angular.module('projects').controller('ProjectsController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Projects', 'Media', 'Uploads',
-	function($scope, $upload, $stateParams, $location, Authentication, Projects, Media, Uploads ) {
+angular.module('projects').controller('ProjectsController', ['$scope', '$upload', '$stateParams', '$location', 'Authentication', 'Projects', 'Uploads',
+	function($scope, $upload, $stateParams, $location, Authentication, Projects, Uploads ) {
 		$scope.authentication = Authentication;
 
         $scope.onFileSelect = function ($files){
@@ -33,14 +33,17 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$upload'
                 $scope.error = errorResponse.data.message;
             };
 
-            Uploads.delete(project.photo).success(function(data) {
-                Uploads.upload($scope.photo).success(function(data) {
-                    project.photo = data.files[0].url;
-                    project.$update(function() {
-                        $location.path('projects/' + project._id);
-                    }, errorFunction);
-                }).error(errorFunction);
-            }).error(errorFunction);
+            var updateProject = function() {
+                project.$update(function() {
+                    $location.path('projects/' + project._id);
+                }, errorFunction);
+            };
+
+            if (typeof $scope.photo !== 'undefined') {
+                Uploads.updatePhoto($scope.photo, project, updateProject);
+            } else {
+                updateProject();
+            }
 		};
 
         $scope.create = function() {

@@ -15,10 +15,3 @@
     top: 130px;
     color: white;
 }
-
-/*make text-angular buttons less stupid looking*/
-/*todo possibly move this rule into core*/
-.btn-group{
-    margin-top: 4px;
-    margin-bottom: 4px;
-}

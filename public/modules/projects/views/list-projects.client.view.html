@@ -8,13 +8,10 @@
         <a
            data-ng-href="#!/projects/{{project._id}}"
            class="remove-highlight">
-            <div class="container">
-			<h1
-                class="project-overlay"
-                data-ng-bind="project.name"
-                    data-ng-show="projectIsSelected(project)"></h1>
-            </div>
-            <img class="project-img"
+			<h1                 data-ng-bind="project.name"
+                    >
+             </h1>
+            <img
                  data-ng-src="{{project.photo}}"
                  />
 
