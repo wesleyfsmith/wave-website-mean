@@ -113,15 +113,23 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 		$scope.update = function() {
 			var bio = $scope.bio ;
 
+            addSelectedTeamsToBio(bio);
+
             var errorFunction = function(errorResponse) {
                 $scope.error = errorResponse.data.message;
             };
 
-            Uploads.updatePhoto(bio.photo, $scope.photo, bio);
+            var updateBio = function() {
+                bio.$update(function() {
+                    $location.path('bios/' + bio._id);
+                }, errorFunction);
+            };
 
-            bio.$update(function() {
-                $location.path('bios/' + bio._id);
-            }, errorFunction);
+            if (typeof $scope.photo !== 'undefined') {
+                Uploads.updatePhoto($scope.photo, bio, updateBio);
+            } else {
+                updateBio();
+            }
 
 		};
 
