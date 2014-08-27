@@ -26,7 +26,11 @@ var ProjectSchema = new Schema({
 	},
     photo: {
         type: String,
-
+        required: 'Please attach a photo to this project'
+    },
+    content: {
+        type: String,
+        required: 'Please add a description for this project'
     }
 });
 

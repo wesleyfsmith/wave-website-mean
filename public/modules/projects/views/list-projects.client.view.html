@@ -1,16 +1,12 @@
-<section data-ng-controller="ProjectsController" data-ng-init="find()">
+<section data-ng-controller="ProjectsController" data-ng-init="find()" class="list-projects">
     <div class="page-header">
         <h1>Projects</h1>
+        <h2>Subtitle text about our awesome projects!!!</h2>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="project in projects" data-ng-href="#!/projects/{{project._id}}" class="list-group-item">
-			<small class="list-group-item-text">
-				Posted on
-				<span data-ng-bind="project.created | date:'medium'"></span>
-				by
-				<span data-ng-bind="project.user.displayName"></span>
-			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="project.name"></h4>
+        <a data-ng-repeat="project in projects" data-ng-href="#!/projects/{{project._id}}" class="list-group-item col-md-6 text-center">
+            <h2 class="list-group-item-heading" data-ng-bind="project.name"></h2>
+            <img data-ng-src="{{project.photo}}" />
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!projects.$resolved || projects.length">

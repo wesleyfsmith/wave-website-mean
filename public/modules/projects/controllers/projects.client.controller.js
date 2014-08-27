@@ -1,26 +1,36 @@
 'use strict';
 
 // Projects controller
-angular.module('projects').controller('ProjectsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Projects',
-	function($scope, $stateParams, $location, Authentication, Projects ) {
+angular.module('projects').controller('ProjectsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Projects', 'Uploads',
+	function($scope, $stateParams, $location, Authentication, Projects, Uploads ) {
 		$scope.authentication = Authentication;
+
+        $scope.onFileSelect = function ($files){
+            $scope.photo = $files[0];
+        };
 
 		// Create new Project
 		$scope.create = function() {
 			// Create new Project object
 			var project = new Projects ({
-				name: this.name
+				name: this.name,
+                content: this.content
 			});
 
-			// Redirect after save
-			project.$save(function(response) {
-				$location.path('projects/' + response._id);
-			}, function(errorResponse) {
-				$scope.error = errorResponse.data.message;
-			});
+            var errorFunction = function(errorResponse) {
+                $scope.error = errorResponse.data.message;
+            };
+
+            Uploads.upload($scope.photo).success(function(data) {
+                project.photo = data.files[0].url;
+                project.$save(function(response) {
+                    $location.path('projects/' + response._id);
+                }, errorFunction);
+            });
 
 			// Clear form fields
 			this.name = '';
+            this.content = '';
 		};
 
 		// Remove existing Project
@@ -41,13 +51,24 @@ angular.module('projects').controller('ProjectsController', ['$scope', '$statePa
 
 		// Update existing Project
 		$scope.update = function() {
-			var project = $scope.project ;
+			var project = $scope.project;
 
-			project.$update(function() {
-				$location.path('projects/' + project._id);
-			}, function(errorResponse) {
-				$scope.error = errorResponse.data.message;
-			});
+            var errorFunction = function(errorResponse) {
+                $scope.error = errorResponse.data.message;
+            };
+
+            var updateProject = function() {
+                project.$update(function() {
+                    $location.path('projects/' + project._id);
+                }, errorFunction);
+            };
+
+            if (typeof $scope.photo !== 'undefined') {
+                Uploads.updatePhoto($scope.photo, project, updateProject);
+            } else {
+                updateProject();
+            }
+
 		};
 
 		// Find a list of Projects

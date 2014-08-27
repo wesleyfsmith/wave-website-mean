@@ -1,0 +1,26 @@
+.view-project img {
+    width: 50%;
+}
+
+.list-projects img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.list-projects .list-group-item {
+    height: 300px;
+    overflow: hidden;
+}
+
+.list-projects h2 {
+    color: white;
+}
+
+.title {
+    position: absolute;
+    height: 100px;
+    top: 100px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
