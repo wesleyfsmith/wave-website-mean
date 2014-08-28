@@ -11,6 +11,8 @@
 .list-projects .list-group-item {
     height: 300px;
     overflow: hidden;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .title {
