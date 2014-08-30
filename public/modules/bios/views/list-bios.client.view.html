@@ -13,6 +13,7 @@
         </div>
     </div>
 
+<div class="teams">
     <div class="row">
         <div class="col-md-5">
             <i class="fa fa-building-o fa-5x"></i>
@@ -23,13 +24,11 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.            </p>
         </div>
         <div class="col-md-7">
-            <div data-ng-repeat="bio in bioBuckets['Executive']">
-                <div data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
-            </div>
+                <div data-ng-repeat="bio in bioBuckets['Executive']" data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
         </div>
     </div>
 
-        <div class="row">
+        <div class="row gray-background">
             <div class="col-md-7">
                 <div data-ng-repeat="bio in bioBuckets['Board of Directors']">
                     <div data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
@@ -62,7 +61,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row gray-background">
             <div class="col-md-7">
                 <div data-ng-repeat="bio in bioBuckets['Software Engineering']">
                     <div data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
@@ -96,7 +95,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row gray-background">
             <div class="col-md-7">
                 <div data-ng-repeat="bio in bioBuckets['Manufacturing Engineering']">
                     <div data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
@@ -112,14 +111,15 @@
             </div>
         </div>
 
-        <!--<div class="bioHeadshotContainer">-->
-            <!--<div data-ng-repeat="bioRow in bioRows" class="row">-->
-                <!--<div data-ng-repeat="bio in bioRow" class="col-md-4">-->
+        <div class="bioHeadshotContainer">
+            <div data-ng-repeat="bioRow in bioRows" class="row">
+                <div data-ng-repeat="bio in bioRow" class="col-md-4">
 
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+                </div>
+            </div>
+        </div>
 
+    </div>
     </div>
 
 </section>

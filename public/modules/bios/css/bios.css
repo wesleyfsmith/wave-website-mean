@@ -22,8 +22,8 @@
     color: white;
 }
 
-.col-md-7 .col-md-4 {
-    /* remove px (zero should not have units)*/
+.col-md-7 .col-md-3 {
+     /*remove px (zero should not have units)*/
     padding: 0;
 }
 
@@ -48,12 +48,31 @@ img.grayscale.disabled {
     -webkit-filter: grayscale(0%);
 }
 
+.bios-page .page-header {
+    height: 320px;
+}
+
+.bios-page .col-md-7 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .bios-page .col-md-5 {
     text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .bios-page .col-md-5 i {
     font-size: 10em;
+}
+
+.bios-page .divider {
+    background-color: black;
+    height: 1px;
+    width: 100%;
 }
 
 .popover-content {
@@ -64,7 +83,7 @@ img.grayscale.disabled {
     text-align: center;
 }
 
-.row {
-    margin-top: 15px;
-    margin-bottom: 15px;
+.teams .row {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
