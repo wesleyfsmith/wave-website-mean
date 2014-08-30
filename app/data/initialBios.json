@@ -1,0 +1,170 @@
+[
+    {
+        "name": "Michael Masquelier",
+        "title": "CEO & CTO",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_2241.jpg",
+        "teams": ["Executive", "Board of Directors"]
+    },
+    {
+        "name": "Wesley Smith",
+        "title": "CDO & Founder",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_2365.jpg",
+        "teams": ["Executive", "Board of Directors"]
+    },
+    {
+        "name": "Guy Letendre",
+        "title": "Chief Operating Officer",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_2176.jpg",
+        "teams": ["Executive"]
+    },
+    {
+        "name": "James May",
+        "title": "Vice President of Program Management",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_1828.jpg",
+        "teams": ["Executive"]
+    },
+    {
+        "name": "Zach Kahn",
+        "title": "Vice President of Business Development",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_2229.jpg",
+        "teams": ["Executive"]
+    },
+    {
+        "name": "John Inglish",
+        "title": "Board Member",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/holder.jpg",
+        "teams": ["Board of Directors"]
+    },
+    {
+        "name": "Curt Roberts",
+        "title": "Board Member",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/holder.jpg",
+        "teams": ["Board of Directors"]
+    },
+    {
+        "name": "Dalton Wright",
+        "title": "Board Member",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/holder.jpg",
+        "teams": ["Board of Directors"]
+    },
+    {
+        "name": "Andre Lortz",
+        "title": "Board Member",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/holder.jpg",
+        "teams": ["Board of Directors"]
+    },
+    {
+        "name": "Hunter Wu",
+        "title": "Chief Scientist",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_2118.jpg",
+        "teams": ["Power Electronics Engineering"]
+    },
+    {
+        "name": "Hadi Malek",
+        "title": "Product Engineering Manager",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_2161.jpg",
+        "teams": ["Power Electronics Engineering"]
+    },
+    {
+        "name": "John Ruess",
+        "title": "Electrical Engineer",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_1870.jpg",
+        "teams": ["Power Electronics Engineering"]
+    },
+    {
+        "name": "Eric Ladd",
+        "title": "Power Electronics Test Engineer",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_1937.jpg",
+        "teams": ["Power Electronics Engineering"]
+    },
+    {
+        "name": "Michael Lewis",
+        "title": "Lab Technician",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_2043.jpg",
+        "teams": ["Power Electronics Engineering"]
+    },
+    {
+        "name": "Lehi Vitor",
+        "title": "Lab Technician",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_2078.jpg",
+        "teams": ["Power Electronics Engineering"]
+    },
+    {
+        "name": "Bryan Stenquist",
+        "title": "Senior Embedded Software Engineer",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_2196.jpg",
+        "teams": ["Software Engineering"]
+    },
+    {
+        "name": "Marcellus Harper",
+        "title": "Embedded Software Engineer",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_2037.jpg",
+        "teams": ["Software Engineering"]
+    },
+    {
+        "name": "Eric Christensen",
+        "title": "Embedded Software Engineer",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_1961.jpg",
+        "teams": ["Software Engineering"]
+    },
+    {
+        "name": "Jay Hotvedt",
+        "title": "Embedded Software Engineer",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_1990.jpg",
+        "teams": ["Software Engineering"]
+    },
+    {
+        "name": "Steve Ball",
+        "title": "Software/Firmware Engineer",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_2094.jpg",
+        "teams": ["Software Engineering"]
+    },
+    {
+        "name": "Andy Moore",
+        "title": "Mechanical Engineering Manager",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/holder.jpg",
+        "teams": ["Mechanical Engineering"]
+    },
+    {
+        "name": "Evans Griego",
+        "title": "Senior Mechanical Engineer",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_1976.jpg",
+        "teams": ["Mechanical Engineering"]
+    },
+    {
+        "name": "Robert Erickson",
+        "title": "Mechanical Engineer",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_1911.jpg",
+        "teams": ["Mechanical Engineering"]
+    },
+    {
+        "name": "Robert Jackson",
+        "title": "Mechanical Engineer",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_1932.jpg",
+        "teams": ["Mechanical Engineering"]
+    },
+    {
+        "name": "Tracie Peterson",
+        "title": "Project Manager",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_1853.jpg",
+        "teams": ["Manufacturing Engineering"]
+    },
+    {
+        "name": "Robert Baker",
+        "title": "Manufacturing Data Engineer",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/holder.jpg",
+        "teams": ["Manufacturing Engineering"]
+    },
+    {
+        "name": "Melissa Wilcken",
+        "title": "Director of Product Manufacturing",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/DSC_1845.jpg",
+        "teams": ["Manufacturing Engineering"]
+    },
+    {
+        "name": "Melanie Espinosa",
+        "title": "Supply Chain Assistant",
+        "photo": "http://localhost:3000/uploads/initialHeadshot/holder.jpg",
+        "teams": ["Manufacturing Engineering"]
+    }
+]

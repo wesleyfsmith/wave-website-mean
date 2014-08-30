@@ -16,4 +16,8 @@ module.exports = function(app) {
 
 	// Finish by binding the Bio middleware
 	app.param('bioId', bios.bioByID);
+
+
+    app.route('/bios_init')
+        .get(users.requiresLogin, bios.init);
 };

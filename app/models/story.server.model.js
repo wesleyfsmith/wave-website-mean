@@ -24,7 +24,11 @@ var StorySchema = new Schema({
 		type: Schema.ObjectId,
 		ref: 'User'
 	},
-    publisherIcon: {
+    teaserContent: {
+        type: String,
+        required: 'Please add some teaser content'
+    },
+    photo: {
         type: String,
         required: 'Please add a publisher icon'
     }

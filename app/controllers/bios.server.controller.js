@@ -109,6 +109,16 @@ exports.list = function(req, res) {
     });
 };
 
+exports.init = function(req, res) {
+    var initialBios = require('../data/initialBios');
+
+    for (var i = 0; i < initialBios.length; i++) {
+        var bio = new Bio(initialBios[i]);
+        bio.save();
+    }
+    res.jsonp('Success');
+};
+
 /**
  * Bio middleware
  */
