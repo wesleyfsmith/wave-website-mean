@@ -1,6 +1,6 @@
-<div class="bioHeadshotContainer col-md-3" popover-title="{{displayBioTitle}}"
+<div class="bioHeadshotContainer col-md-4" popover-title="{{displayBioTitle}}"
      popover="{{displayBioName}}" popover-trigger="mouseenter" popover-animation="true">
-    <div data-ng-mouseover="selectBio(bio)" >
+    <div class="border-class" data-ng-mouseover="selectBio(bio)" >
         <a class="remove-highlight text-center">
             <img data-ng-src="{{bio.photo}}" data-ng-class="{grayscale: true, disabled: mouseOverBioId === bio._id}"/>
 
