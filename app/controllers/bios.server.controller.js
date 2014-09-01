@@ -114,6 +114,7 @@ exports.init = function(req, res) {
 
     for (var i = 0; i < initialBios.length; i++) {
         var bio = new Bio(initialBios[i]);
+
         bio.save();
     }
     res.jsonp('Success');
