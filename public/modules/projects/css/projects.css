@@ -1,24 +1,85 @@
-.view-project img {
-    width: 50%;
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Trocchi);
+
+body {
+    font-family: 'Libre Baskerville', serif;
 }
 
-.list-projects img {
-    position: relative;
-    height: 100%;
-    width: 100%;
+h1 h2{
+    font-family: 'Libre Baskerville', serif;
 }
 
-.list-projects .list-group-item {
-    height: 300px;
-    overflow: hidden;
-    width: 100%;
-    margin-bottom: 10px;
+.container {
+  max-width: 960px;
+  height: 80%;
 }
 
-.title {
-    position: absolute;
-    height: 100px;
-    top: 100px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+.line {
+    border-bottom:1px solid #2c3e50;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
+
+.feature-photo {
+  width: 100%;
+}
+.feature-text h3 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+.feature-text p {
+  line-height: 1.5em;
+  margin: 1em 0;
+  height: 277px;
+  overflow: hidden;
+}
+
+h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+
+
+
+@media screen and (max-width: 991px) {
+
+.feature-text p {
+  height: 100px;
+  overflow: hidden;
+
+}
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .feature-photo {
+    margin: 0.1em 0;
+  }
+   .media-benefit {
+    margin-bottom: 2em;
+  }
+
+  .feature-photo {
+    margin-top: 20px;
+  }
+
+  .feature-text h3 {
+  text-align: center;
+  margin-top: 40px;
+  }
+
+  .feature-text p {
+  text-align: center;
+  }
+
+  a.read {
+    margin: 0 auto;
+  }
+
+}
+
+
+
+
