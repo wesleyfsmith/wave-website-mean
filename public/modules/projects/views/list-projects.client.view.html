@@ -1,17 +1,34 @@
+
+
+
 <section data-ng-controller="ProjectsController" data-ng-init="find()" class="list-projects">
+
     <div class="page-header">
         <h1>Projects</h1>
         <h2>Subtitle text about our awesome projects!!!</h2>
     </div>
-    <div class="list-group">
-        <div data-ng-repeat="project in projects" class="col-md-6">
-            <a  data-ng-href="#!/projects/{{project._id}}" class="list-group-item text-center" >
-                <h2 class="list-group-item-heading" data-ng-bind="project.name"></h2>
-                <img data-ng-src="{{project.photo}}" />
-            </a>
-        </div>
-    </div>
-    <div class="alert alert-warning text-center" data-ng-hide="!projects.$resolved || projects.length">
-    	No Projects yet, why don't you <a href="/#!/projects/create">create one</a>?
-    </div>
+
+
+   
+    <div data-ng-repeat="project in projects">
+        <div class="container">
+          <div class="row">
+            <div class="line"></div>
+            <div class="col-md-4 col-sm-6 feature-text">
+              <a data-ng-href="#!/projects/{{project._id}}"><h3 data-ng-bind="project.name"></h3></a>
+              <p data-ng-bind-html="project.content"></p>
+              <a data-ng-href="#!/projects/{{project._id}}" class="read">Read More</a>
+
+            </div> <!-- /.feature-text -->
+                <div class="col-md-8 col-sm-6">
+                  <a data-ng-href="#!/projects/{{project._id}}"><img data-ng-src="{{project.photo}}" class="feature-photo" ></a>
+                </div>
+
+          </div> <!-- /.row -->
+        </div>  
+        
+    </div>    
+
+
 </section>
+      
