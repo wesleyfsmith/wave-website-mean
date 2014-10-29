@@ -9,4 +9,4 @@ app/tests/coverage/
 .idea/
 public/media/*
 !public/media/.placeholder
-config/env/privateKeys.js
+config/env/twitterKeys.js
