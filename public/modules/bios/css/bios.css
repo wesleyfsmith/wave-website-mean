@@ -74,6 +74,10 @@ img.grayscale.disabled {
     transform: translateY(-50%);
 }
 
+.bios-page .col-md-5 p {
+    text-align: justify;
+}
+
 .bios-page .col-md-5 i {
     font-size: 10em;
 }
