@@ -9,7 +9,9 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
 		$scope.create = function() {
 			// Create new Job object
 			var job = new Jobs ({
-				name: this.name
+				name: this.name,
+				responsibilities: this.responsibilities,
+				description: this.description
 			});
 
 			// Redirect after save

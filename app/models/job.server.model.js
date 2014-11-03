@@ -20,6 +20,16 @@ var JobSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
+	responsibilities: {
+		type: String,
+		default: '',
+		required: 'Please add job responsibilities'
+	},
+	description: {
+		type: String,
+		default: '',
+		required: 'Please add a job description'
+	},
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
