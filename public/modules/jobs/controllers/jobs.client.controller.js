@@ -11,7 +11,8 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
 			var job = new Jobs ({
 				name: this.name,
 				responsibilities: this.responsibilities,
-				description: this.description
+				description: this.description,
+				qualifications: this.qualifications
 			});
 
 			// Redirect after save
@@ -23,6 +24,9 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
 
 			// Clear form fields
 			this.name = '';
+			this.responsibilities = '';
+			this.description = '';
+			this.qualifications = '';
 		};
 
 		// Remove existing Job

@@ -30,6 +30,11 @@ var JobSchema = new Schema({
 		default: '',
 		required: 'Please add a job description'
 	},
+	qualifications: {
+		type: String,
+		default: '',
+		required: 'Please add job qualifications'
+	},
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
