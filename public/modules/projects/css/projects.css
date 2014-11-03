@@ -1,40 +1,40 @@
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Trocchi);
 
-body {
+.list-projects body {
     font-family: 'Libre Baskerville', serif;
 }
 
-h1 h2{
+.list-projects h1 h2{
     font-family: 'Libre Baskerville', serif;
 }
 
-.container {
+.list-projects .container {
   max-width: 960px;
   height: 80%;
 }
 
-.line {
+.list-projects .line {
     border-bottom:1px solid #2c3e50;
     margin-bottom: 5%;
     margin-top: 5%;
 }
 
-.feature-photo {
+.list-projects .feature-photo {
   width: 100%;
 }
-.feature-text h3 {
+.list-projects .feature-text h3 {
   margin: 0;
   font-size: 2em;
   font-weight: bold;
 }
-.feature-text p {
+.list-projects .feature-text p {
   line-height: 1.5em;
   margin: 1em 0;
   height: 277px;
   overflow: hidden;
 }
 
-h3 {
+.list-projects h3 {
     font-family: 'Libre Baskerville', serif;
 }
 
@@ -43,7 +43,7 @@ h3 {
 
 @media screen and (max-width: 991px) {
 
-.feature-text p {
+.list-projects .feature-text p {
   height: 100px;
   overflow: hidden;
 
@@ -54,27 +54,27 @@ h3 {
 
 @media screen and (max-width: 768px) {
 
-  .feature-photo {
+  .list-projects .feature-photo {
     margin: 0.1em 0;
   }
-   .media-benefit {
+   .list-projects .media-benefit {
     margin-bottom: 2em;
   }
 
-  .feature-photo {
+  .list-projects .feature-photo {
     margin-top: 20px;
   }
 
-  .feature-text h3 {
+  .list-projects .feature-text h3 {
   text-align: center;
   margin-top: 40px;
   }
 
-  .feature-text p {
+  .list-projects .feature-text p {
   text-align: center;
   }
 
-  a.read {
+  .list-projects a.read {
     margin: 0 auto;
   }
 

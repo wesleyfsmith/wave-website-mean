@@ -28,6 +28,6 @@ angular.module('core').service('Uploads', ['$upload', '$http',
                         saveCallback();
                     });
                 });
-        }
+        };
     }
 ]);
