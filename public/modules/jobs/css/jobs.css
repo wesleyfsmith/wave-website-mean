@@ -1,0 +1,65 @@
+
+
+/*.col-md-12 {
+  border: none;
+}*/
+
+
+.list-jobs img {
+  width: 100%;
+}
+
+
+.list-jobs .line {
+    border-bottom:1px solid #2c3e50;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+
+.list-jobs .current-positions {
+  text-align: center;
+  margin-top: 15%;
+}
+
+.list-jobs .list-group {
+  /*margin: 10%;*/
+  margin: 8%;
+}
+
+.list-jobs .current {
+  /*margin: 10%;*/
+  margin-bottom: 0;
+}
+
+.list-jobs button {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+}
+
+
+.list-jobs .btn{
+    box-shadow: 1px 1px 1px #bbb;
+}
+
+.list-jobs .btn-sunny {
+color: #fff;
+background-color: #f4ad49;
+/*border-bottom:2px solid #c38a3a;*/
+}
+
+.list-jobs .btn-sunny:hover, .btn-sky.active:focus, .btn-sunny:focus, .open>.dropdown-toggle.btn-sunny {
+color: #fff;
+background-color: #f5b75f;
+border-bottom:2px solid #c4924c;
+outline: none;
+}
+
+
+.list-jobs .btn-sunny:active, .btn-sunny.active {
+color: #fff;
+background-color: #d69840;
+border-top:2px solid #ab7a33;
+margin-top: 2px;
+}
