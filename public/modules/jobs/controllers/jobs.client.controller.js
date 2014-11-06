@@ -1,8 +1,8 @@
 'use strict';
 
 // Jobs controller
-angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Jobs',
-	function($scope, $stateParams, $location, Authentication, Jobs ) {
+angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Jobs', '$anchorScroll',
+	function($scope, $stateParams, $location, Authentication, Jobs, $anchorScroll ) {
 		$scope.authentication = Authentication;
 
 		// Create new Job
@@ -67,5 +67,10 @@ angular.module('jobs').controller('JobsController', ['$scope', '$stateParams', '
 				jobId: $stateParams.jobId
 			});
 		};
+
+        $scope.scrollToJob = function(id) {
+            $location.hash(id);
+            $anchorScroll();
+        };
 	}
 ]);

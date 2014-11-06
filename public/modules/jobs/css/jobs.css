@@ -19,7 +19,6 @@
 
 .list-jobs .current-positions {
   text-align: center;
-  margin-top: 15%;
 }
 
 .list-jobs .list-group {
@@ -62,4 +61,18 @@ color: #fff;
 background-color: #d69840;
 border-top:2px solid #ab7a33;
 margin-top: 2px;
+}
+
+.list-jobs .job-attributes {
+    text-align: left;
+}
+
+.list-jobs .job-description {
+    text-align: justify;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.list-jobs .job-row {
+    margin-bottom: 10px;
 }

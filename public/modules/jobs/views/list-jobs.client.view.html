@@ -3,32 +3,79 @@
     <div>
         <div class="page-header">
             <h1>The Wave Team</h1>
-        </div>
+            <h2>WAVE is always looking for talented people. Join our team and make an impact in clean tech.</h2>
         <div class="line"></div>
         <img src="modules/jobs/img/stockemployees.jpg">
         <div class="line"></div>
     </div>
 
-
-
-    <div class="row text-center">
-        <div class="col-md-4">
-            <i class="fa fa-camera-retro fa-3x"></i> 
-            <p>WAVE employees are passionate about making a positive impact in the area of clean technology.</p>
+    <div class="row">
+        <div class="col-md-6">
+            <p>
+                WAVE offers a competitive compensation package, stock options, medical benefits, and a highly energized and fun work environment. Job is located in the Salt Lake City, UT area. Send resume to careers@waveipt.com.
+            </p>
+            <ul>
+                <li>
+                    Medical
+                </li>
+                <li>
+                    Dental
+                </li>
+                <li>
+                    Lots of Paid Time Off
+                </li>
+                <li>
+                    10 Paid Holidays
+                </li>
+                <li>
+                    Competitive Salaries and Stock Options
+                </li>
+                <li>
+                    Located in the Salt Lake City, UT area
+                </li>
+                <li>
+                    Highly energized and fun work environment
+                </li>
+            </ul>
         </div>
-
-        <div class="col-md-4">
-            <i class="fa fa-camera-retro fa-3x"></i> 
-            <h4>Heading 2</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+        <div class="col-md-6">
+            <p>
+                WAVE is the leading provider of en-route wireless power charging solutions that overcome traditional battery
+                limitations in electric vehicles by delivering wireless power using electrical infrastructure embedded in the
+                roadway and vehicle-mounted receiver plates.
+            </p>
+            <p>
+                WAVE's Wireless Power Transfer (WPT) is created through magnetic
+                fields that move power from underneath the roadway to the vehicle, without wires or cables, and is the most
+                powerful and efficient single pad wireless charging system deployed by a U.S. company for public transit.
+            </p>
+            <p>
+                Candidates must be eligible to work in the US.
+            </p>
+            <p>
+                Send resume to <a href="mailto:careers@waveipt.com">careers@waveipt.com.</a>
+            </p>
         </div>
+    </div>
 
-        <div class="col-md-4">
-            <i class="fa fa-camera-retro fa-3x"></i> 
-            <h4>Heading 3</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-        </div>
-    </div> 
+    <!--<div class="row text-center">-->
+        <!--<div class="col-md-4">-->
+            <!--<i class="fa fa-camera-retro fa-3x"></i> -->
+            <!--<p>WAVE employees are passionate about making a positive impact in the area of clean technology.</p>-->
+        <!--</div>-->
+
+        <!--<div class="col-md-4">-->
+            <!--<i class="fa fa-camera-retro fa-3x"></i> -->
+            <!--<h4>Heading 2</h4>-->
+            <!--<p>WAVE's open and collaborative working environment promotes a culture of innovation and teamwork.</p>-->
+        <!--</div>-->
+
+        <!--<div class="col-md-4">-->
+            <!--<i class="fa fa-camera-retro fa-3x"></i> -->
+            <!--<h4>Heading 3</h4>-->
+            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>-->
+        <!--</div>-->
+    <!--</div> -->
 
 
     <div class="current-positions">
@@ -39,9 +86,8 @@
 
     <div class="row">
         <div class="list-group">
-            <a data-ng-repeat="job in jobs" data-ng-href="#!/jobs/{{job._id}}" class="list-group-item col-md-6 text-center">
+            <a data-ng-repeat="job in jobs" data-ng-click="scrollToJob(job._id)" class="list-group-item col-md-6 text-center">
                 <h4 class="list-group-item-heading" data-ng-bind="job.name"></h4>
-    			
             </a>
         </div>
     </div>    
@@ -49,28 +95,37 @@
 
     <div class="row">
         <div class="list-group">
-            <a data-ng-repeat="job in jobs" data-ng-href="#!/jobs/{{job._id}}" class="list-group-item col-md-12 text-center">
-                <h4 class="list-group-item-heading" data-ng-bind="job.name"></h4>
-
-                <small class="list-group-item-text">
-                    Posted on
-                    <span data-ng-bind="job.created | date:'medium'"></span>
-                    by
-                    <span data-ng-bind="job.user.displayName"></span>
-                </small>
-
-                
+            <div data-ng-repeat="job in jobs" id="{{job._id}}" class="list-group-item col-md-12 text-center job-row">
+                <div class="row">
+                <h3 class="list-group-item-heading" data-ng-bind="job.name"></h3>
+                </div>
+                <div class="row job-description">
+                    <p data-ng-bind-html="job.description"></p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Qualifications</h4>
+                        <p class="job-attributes" data-ng-bind-html="job.qualifications">
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Responsibilities</h4>
+                        <p class="job-attributes" data-ng-bind-html="job.responsibilities">
+                        </p>
+                    </div>
+                </div>
+                <a href="mailto:careers@waveipt.com">
                 <button class="btn btn-sunny text-uppercase btn-sm">Apply Now</button>
-                
-                
-            </a>
+                </a>
+            </div>
         </div>
-    </div>  
-
-
-
-
-    <div class="alert alert-warning text-center" data-ng-hide="!jobs.$resolved || jobs.length">
-    	No Jobs yet, why don't you <a href="/#!/jobs/create">create one</a>?
     </div>
+
+    <div class="row">
+        <p>
+            WAVE is an equal opportunity employer. All applicants will be afforded equal employment opportunities without discrimination due to race, creed, color, national origin, sex, age, disability or marital status.
+        </p>
+    </div>
+
+
 </section>
