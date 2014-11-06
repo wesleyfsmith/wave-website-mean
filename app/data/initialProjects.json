@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Utah Transit Authority (UTA)",
+        "photo": "",
+        "content": "Officially launching in October 2014, the Utah Transit Authority will utilize a fully warranted, wirelessly powered charging system to power a 40-foot all-electric bus, built by Complete Coach Works. The route serves as a feeder to UTA’s South Campus TRAX light rail station. The WAVE 50 kW charging system will allow the bus to run a full duty cycle of 140+ miles per day."
+    },
+    {
+        "name": "Monterey-Salinas Transit (MST)",
+        "photo": "",
+        "content": "Monterey-Salinas Transit will debut an electric old-fashioned trolley “Powered by WAVE” on its world famous Waterfront Trolley line servicing Downtown Monterey, Fisherman’s Wharf, and Cannery Row. WAVE’s wireless charging system will enable MST’s trolley to complete a full daily duty cycle on this demanding and high-profile route. Electric trolley service with WAVE charging will begin in 2015."
+    },
+    {
+        "name": "McAllen Metro",
+        "photo": "",
+        "content": "Beginning in 2015, McAllen Metro will introduce two electric buses with WAVE wireless charging into their Green Line service, connecting the airport, hospital and shopping districts. WAVE is proud to work with Complete Coach Works, who is providing remanufactured electric buses to this cutting-edge project, to begin electrifying public transit in McAllen, TX."
+    },
+    {
+        "name": "Antelope Valley Transit Authority (AVTA)",
+        "photo": "",
+        "content": "AVTA is a leader in zero emission bus technology and recently announced the acceptance of two BYD electric buses that will be equipped with WAVE’s wireless charging technology. WAVE will provide two wireless chargers in 2015 that will allow AVTA to charge their buses en-route. The WAVE system will enable AVTA to run their buses for the same number of hours as its diesel buses currently operate."
+    },
+]

@@ -60,12 +60,6 @@
         "teams": ["Power Electronics Engineering"]
     },
     {
-        "name": "Hadi Malek",
-        "title": "Product Engineering Manager",
-        "photo": "/uploads/initialHeadshot/DSC_2161.jpg",
-        "teams": ["Power Electronics Engineering"]
-    },
-    {
         "name": "John Ruess",
         "title": "Electrical Engineer",
         "photo": "/uploads/initialHeadshot/DSC_1870.jpg",
@@ -129,12 +123,6 @@
         "name": "Evans Griego",
         "title": "Senior Mechanical Engineer",
         "photo": "/uploads/initialHeadshot/DSC_1976.jpg",
-        "teams": ["Mechanical Engineering"]
-    },
-    {
-        "name": "Robert Erickson",
-        "title": "Mechanical Engineer",
-        "photo": "/uploads/initialHeadshot/DSC_1911.jpg",
         "teams": ["Mechanical Engineering"]
     },
     {
