@@ -106,6 +106,17 @@ exports.list = function(req, res) { Project.find().sort('-created').populate('us
 	});
 };
 
+exports.init = function(req, res) {
+    var initialProjects = require('../data/initialProjects');
+
+    for (var i = 0; i < initialProjects.length; i++) {
+        var project = new Project(initialProjects[i]);
+    }
+
+    project.save();
+    res.jsonp('Success');
+};
+
 /**
  * Project middleware
  */

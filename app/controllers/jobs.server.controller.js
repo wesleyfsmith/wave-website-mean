@@ -106,6 +106,17 @@ exports.list = function(req, res) { Job.find().sort('-created').populate('user',
 	});
 };
 
+exports.init = function(req, res) {
+    var initialJobs = require('../data/initialJobs');
+
+    for (var i = 0; i < initialJobs.length; i++) {
+        var job = new Job(initialJobs[i]);
+    }
+
+    job.save();
+    res.jsonp('Success');
+};
+
 /**
  * Job middleware
  */
