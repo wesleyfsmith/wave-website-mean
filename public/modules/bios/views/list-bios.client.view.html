@@ -2,10 +2,10 @@
     <div class="page-header">
         <h1>Meet Our Team</h1>
         <h3>
-            This is a subtitle. Here is a spot to put a brief blurb about how great the wave team is.
+            WAVE’s team combines engineering and management expertise to develop its wireless power technology.
         </h3>
+        <div class="line"></div>
     </div>
-    <div>
 
     <div class="row">
         <div class="alert alert-warning text-center" data-ng-hide="!bios.$resolved || bios.length">
@@ -15,34 +15,38 @@
 
 <div class="teams">
     <div class="row gray-background">
+        <div class="col-md-7">
+            <div data-ng-repeat="bio in bioBuckets['Executive']" data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
+        </div>
         <div class="col-md-5">
             <i class="fa fa-building-o fa-5x"></i>
             <h2>
                 Executive
             </h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.            </p>
+                WAVE’s Executive Team is comprised of engineers, technology experts and business professionals
+                dedicated to bringing to market the latest innovations in wireless power technology for vehicle
+                applications.
+            </p>
         </div>
-        <div class="col-md-7">
-                <div data-ng-repeat="bio in bioBuckets['Executive']" data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
-        </div>
+
     </div>
 
-        <div class="row gray-background">
-            <div class="col-md-7">
-                <div data-ng-repeat="bio in bioBuckets['Board of Directors']">
-                    <div data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
-                </div>
-            </div>
-            <div class="col-md-5 vcenter">
-                <i class="fa fa-group fa-5x text-center"></i>
-                <h2>
-                    Board of Directors
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                </p>
-            </div>
-        </div>
+        <!--<div class="row gray-background">-->
+            <!--<div class="col-md-7">-->
+                <!--<div data-ng-repeat="bio in bioBuckets['Board of Directors']">-->
+                    <!--<div data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-5 vcenter">-->
+                <!--<i class="fa fa-group fa-5x text-center"></i>-->
+                <!--<h2>-->
+                    <!--Board of Directors-->
+                <!--</h2>-->
+                <!--<p>-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                </p>-->
+            <!--</div>-->
+        <!--</div>-->
 
         <div class="row gray-background">
             <div class="col-md-5">
@@ -51,7 +55,9 @@
                     Power Electronics Engineering
                 </h2>
                 <p>
-                    The Power Electronics Engineering Team designs and builds the wireless power systems, including all testing, troubleshooting, and integration. The team also works on R & D projects, looking to expand the current WAVE technology.
+                    The Power Electronics Engineering Team designs and builds WAVE’s wireless power systems, including
+                    all testing, troubleshooting, and integration. The team also works on research and development projects
+                    to expand the scope of WAVE’s technology.
                 </p>
             </div>
             <div class="col-md-7">
@@ -73,7 +79,8 @@
                     Software Engineering
                 </h2>
                 <p>
-                    The Software Team designs, develops, and validates the advanced charging control algorithms in a real-time embedded environment.
+                    The Software Engineering Team designs, develops, and validates WAVE’s advanced charging control
+                    algorithms in a real-time embedded environment.
                 </p>
             </div>
         </div>
@@ -85,7 +92,8 @@
                     Mechanical Engineering
                 </h2>
                 <p>
-                    The Mechanical Team creates and completes the mechanical systems, designs, and technology implementation. They oversee the installation and project schedule, as well as provide customer support.
+                    The Mechanical Engineering Team creates and implements WAVE’s mechanical system design and
+                    validation specifications, as well as assisting with technology implementation.
                 </p>
             </div>
             <div class="col-md-7">
@@ -107,7 +115,9 @@
                     Manufacturing Engineering
                 </h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                </p>
+                    The Manufacturing Engineering Team oversees all project management, including project schedule,
+                    installation, and customer service.
+                </p>
             </div>
         </div>
 
