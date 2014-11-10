@@ -1,8 +1,11 @@
 'use strict';
 
+var path = require('path');
+var appDir = path.dirname(require.main.filename);
+
 var options = {
-    tmpDir: __dirname + '/../../public/uploads/tmp',
-    uploadDir: __dirname + '/../../public/uploads',
+    tmpDir: appDir + '/public/uploads/tmp',
+    uploadDir: appDir + '/public/uploads',
     uploadUrl: '/uploads/',
     storage: {
         type: 'local'

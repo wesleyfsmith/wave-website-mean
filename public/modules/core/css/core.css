@@ -70,7 +70,7 @@ body {
 .jumbotron {
     border-bottom: 0;
     margin-bottom: 0;
-    background: url(../img/brand/bus_main.jpeg) 50%;
+    background: url(/modules/core/img/brand/bus_main.jpeg) 50%;
     /*background: steelblue;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;

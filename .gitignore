@@ -10,3 +10,4 @@ app/tests/coverage/
 public/media/*
 !public/media/.placeholder
 config/env/twitterKeys.js
+public/uploads/*
