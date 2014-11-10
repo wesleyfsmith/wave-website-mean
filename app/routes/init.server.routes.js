@@ -7,9 +7,10 @@ module.exports = function(app) {
 
     //routes to read in data from json file
     app.route('/init')
-        .get(users.requiresLogin, function(req, res) {
+        .get(function(req, res) {
             bios.init(req, res);
             projects.init(req, res);
             jobs.init(req, res);
+            res.jsonp('success');
         });
 };

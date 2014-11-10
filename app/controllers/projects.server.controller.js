@@ -111,10 +111,9 @@ exports.init = function(req, res) {
 
     for (var i = 0; i < initialProjects.length; i++) {
         var project = new Project(initialProjects[i]);
+        project.save();
     }
 
-    project.save();
-    res.jsonp('Success');
 };
 
 /**

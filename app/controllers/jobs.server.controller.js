@@ -111,10 +111,9 @@ exports.init = function(req, res) {
 
     for (var i = 0; i < initialJobs.length; i++) {
         var job = new Job(initialJobs[i]);
+        job.save();
     }
 
-    job.save();
-    res.jsonp('Success');
 };
 
 /**
