@@ -20,10 +20,10 @@ module.exports = {
                 'public/lib/angular-ui-utils/ui-utils.min.js',
                 'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
                 'public/lib/ng-file-upload/angular-file-upload.min.js',
-                'public/lib/textAngular/src/textAngular-sanitize.min.js',
-                'public/lib/textAngular/src/textAngularSetup.min.js',
-                'public/lib/textAngular/src/textAngular.min.js',
-                'public/lib/rangy/rangy-core.min.js',
+                'public/lib/textAngular/src/textAngular-sanitize.js',
+                'public/lib/textAngular/src/textAngularSetup.js',
+                'public/lib/textAngular/src/textAngular.js',
+                'public/lib/rangy/rangy-core.js',
                 'public/lib/jquery/dist/jquery.min.js',
                 'public/lib/ng-grid/build/ng-grid.min.js'
 			]
