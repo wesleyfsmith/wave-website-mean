@@ -11,12 +11,12 @@
     },
     {
         "name": "McAllen Metro",
-        "photo": "/uploads/initialProjects/zeps_project.jpg",
+        "photo": "/uploads/initialProjects/mcallen_scaled.png",
         "content": "Beginning in 2015, McAllen Metro will introduce two electric buses with WAVE wireless charging into their Green Line service, connecting the airport, hospital and shopping districts. WAVE is proud to work with Complete Coach Works, who is providing remanufactured electric buses to this cutting-edge project, to begin electrifying public transit in McAllen, TX."
     },
     {
         "name": "Antelope Valley Transit Authority (AVTA)",
-        "photo": "/uploads/initialProjects/byd_project.jpg",
+        "photo": "/uploads/initialProjects/avta_scaled.png",
         "content": "AVTA is a leader in zero emission bus technology and recently announced the acceptance of two BYD electric buses that will be equipped with WAVE’s wireless charging technology. WAVE will provide two wireless chargers in 2015 that will allow AVTA to charge their buses en-route. The WAVE system will enable AVTA to run their buses for the same number of hours as its diesel buses currently operate."
     }
 ]

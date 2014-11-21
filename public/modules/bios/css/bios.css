@@ -62,16 +62,20 @@ img.grayscale.disabled {
 }
 
 .bios-page .col-md-7 {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
 }
 
 .bios-page .col-md-5 {
+    margin-top: 5%;
+    margin-bottom: 5%;
     text-align: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
 }
 
 .bios-page .col-md-5 p {
@@ -97,7 +101,7 @@ img.grayscale.disabled {
 }
 
 .teams .row {
-    height: 500px;
+    /*min-height: 500px;*/
 }
 
 .gray-background {
@@ -111,4 +115,10 @@ img.grayscale.disabled {
 
 .list-projects .page-header {
     margin-bottom: 0px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }

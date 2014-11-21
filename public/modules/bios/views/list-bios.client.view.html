@@ -1,7 +1,7 @@
 <section data-ng-controller="BiosController" data-ng-init="find()" class="bios-page">
     <div class="page-header">
-        <h1>Meet Our Team</h1>
-        <h3>
+        <h1 >Meet Our Team</h1>
+        <h3 class="subtitle">
             WAVE’s team combines engineering and management expertise to develop its wireless power technology.
         </h3>
         <div class="line"></div>
@@ -15,11 +15,11 @@
 
 <div class="teams">
     <div class="row gray-background">
-        <div class="col-md-7">
+        <div class="col-md-7 vcenter">
             <div data-ng-repeat="bio in bioBuckets['Executive']" data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
-        </div>
-        <div class="col-md-5">
-            <i class="fa fa-building-o fa-5x"></i>
+        </div><!--
+        --><div class="col-md-5 vcenter">
+            <i class="fa fa-bar-chart fa-5x"></i>
             <h2>
                 Executive
             </h2>
@@ -49,7 +49,7 @@
         <!--</div>-->
 
         <div class="row gray-background">
-            <div class="col-md-5">
+            <div class="col-md-5 vcenter">
                 <i class="fa fa-power-off fa-5x text-center"></i>
                 <h2>
                     Power Electronics Engineering
@@ -59,8 +59,8 @@
                     all testing, troubleshooting, and integration. The team also works on research and development projects
                     to expand the scope of WAVE’s technology.
                 </p>
-            </div>
-            <div class="col-md-7">
+            </div><!--
+            --><div class="col-md-7 vcenter">
                 <div data-ng-repeat="bio in bioBuckets['Power Electronics Engineering']">
                     <div data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
                 </div>
@@ -68,12 +68,12 @@
         </div>
 
         <div class="row gray-background">
-            <div class="col-md-7">
+            <div class="col-md-7 vcenter">
                 <div data-ng-repeat="bio in bioBuckets['Software Engineering']">
                     <div data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
                 </div>
-            </div>
-            <div class="col-md-5">
+            </div><!--
+            --><div class="col-md-5 vcenter">
                 <i class="fa fa-laptop fa-5x text-center"></i>
                 <h2>
                     Software Engineering
@@ -86,7 +86,7 @@
         </div>
 
         <div class="row gray-background">
-            <div class="col-md-5">
+            <div class="col-md-5 vcenter">
                 <i class="fa fa-gears fa-5x text-center"></i>
                 <h2>
                     Mechanical Engineering
@@ -95,8 +95,8 @@
                     The Mechanical Engineering Team creates and implements WAVE’s mechanical system design and
                     validation specifications, as well as assisting with technology implementation.
                 </p>
-            </div>
-            <div class="col-md-7">
+            </div><!--
+            --><div class="col-md-7 vcenter">
                 <div data-ng-repeat="bio in bioBuckets['Mechanical Engineering']">
                     <div data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
                 </div>
@@ -104,12 +104,12 @@
         </div>
 
         <div class="row gray-background">
-            <div class="col-md-7">
+            <div class="col-md-7 vcenter">
                 <div data-ng-repeat="bio in bioBuckets['Manufacturing Engineering']">
                     <div data-ng-include="'/modules/bios/views/bios-grid.client.view.html'"></div>
                 </div>
-            </div>
-            <div class="col-md-5">
+            </div><!--
+            --><div class="col-md-5 vcenter">
                 <i class="fa fa-wrench fa-5x text-center"></i>
                 <h2>
                     Manufacturing Engineering

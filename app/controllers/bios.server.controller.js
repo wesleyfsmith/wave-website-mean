@@ -117,7 +117,6 @@ exports.init = function(req, res) {
 
         bio.save();
     }
-    res.jsonp('Success');
 };
 
 /**

@@ -6,16 +6,16 @@
         "teams": ["Executive", "Board of Directors"]
     },
     {
-        "name": "Wesley Smith",
-        "title": "CDO & Founder",
-        "photo": "/uploads/initialHeadshot/DSC_2365.jpg",
-        "teams": ["Executive", "Board of Directors"]
-    },
-    {
         "name": "Guy Letendre",
         "title": "Chief Operating Officer",
         "photo": "/uploads/initialHeadshot/DSC_2176.jpg",
         "teams": ["Executive"]
+    },
+    {
+        "name": "Wesley Smith",
+        "title": "CDO & Founder",
+        "photo": "/uploads/initialHeadshot/DSC_2365.jpg",
+        "teams": ["Executive", "Board of Directors"]
     },
     {
         "name": "James May",
@@ -60,15 +60,27 @@
         "teams": ["Power Electronics Engineering"]
     },
     {
-        "name": "John Ruess",
-        "title": "Electrical Engineer",
-        "photo": "/uploads/initialHeadshot/DSC_1870.jpg",
+        "name": "Patrice Lethellier",
+        "title": "Senior Power Electronics Engineer",
+        "photo": "/uploads/initialHeadshot/IMG_0049medium.jpg",
         "teams": ["Power Electronics Engineering"]
     },
     {
         "name": "Eric Ladd",
         "title": "Power Electronics Test Engineer",
         "photo": "/uploads/initialHeadshot/DSC_1937.jpg",
+        "teams": ["Power Electronics Engineering"]
+    },
+    {
+        "name": "John Ruess",
+        "title": "Electrical Engineer",
+        "photo": "/uploads/initialHeadshot/DSC_1870.jpg",
+        "teams": ["Power Electronics Engineering"]
+    },
+    {
+        "name": "Dustin Eldredge",
+        "title": "Electrical Engineer",
+        "photo": "/uploads/initialHeadshot/IMG_0057medium.jpg",
         "teams": ["Power Electronics Engineering"]
     },
     {
@@ -84,8 +96,14 @@
         "teams": ["Power Electronics Engineering"]
     },
     {
+        "name": "Robert Eisert",
+        "title": "Lab Technician",
+        "photo": "/uploads/initialHeadshot/IMG_0070medium.jpg",
+        "teams": ["Power Electronics Engineering"]
+    },
+    {
         "name": "Bryan Stenquist",
-        "title": "Senior Embedded Software Engineer",
+        "title": "Director, Embedded Systems Engineering",
         "photo": "/uploads/initialHeadshot/DSC_2196.jpg",
         "teams": ["Software Engineering"]
     },
@@ -116,7 +134,7 @@
     {
         "name": "Andy Moore",
         "title": "Mechanical Engineering Manager",
-        "photo": "/uploads/initialHeadshot/IMG_0073medium.jpg",
+        "photo": "/uploads/initialHeadshot/IMG_0098medium.jpg",
         "teams": ["Mechanical Engineering"]
     },
     {
