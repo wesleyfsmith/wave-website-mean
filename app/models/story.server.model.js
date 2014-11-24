@@ -28,9 +28,9 @@ var StorySchema = new Schema({
         type: String,
         required: 'Please add some teaser content'
     },
-    photo: {
+    url: {
         type: String,
-        required: 'Please add a publisher icon'
+        required: 'Please add original url'
     }
 });
 
