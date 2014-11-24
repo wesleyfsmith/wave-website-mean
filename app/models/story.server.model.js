@@ -31,6 +31,10 @@ var StorySchema = new Schema({
     url: {
         type: String,
         required: 'Please add original url'
+    },
+    publishDate: {
+        type: String,
+        required: 'Please enter the public date'
     }
 });
 
