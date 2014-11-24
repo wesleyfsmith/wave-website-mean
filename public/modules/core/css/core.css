@@ -107,6 +107,11 @@ body {
     border-radius: 10px;
     padding: 20px;
     margin: 0 auto;
+    min-height: 340px;
+}
+
+.selling-point h3 {
+    color: white;
 }
 
 .selling-point p {

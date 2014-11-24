@@ -9,7 +9,11 @@ angular.module('stories').controller('StoriesController', ['$scope', '$statePara
 		$scope.create = function() {
 			// Create new Story object
 			var story = new Stories ({
-				name: this.name
+				name: this.name,
+                teaserContent: this.teaserContent,
+                url: this.url,
+                publishDate: this.publishDate,
+                publication: this.publication
 			});
 
 			// Redirect after save
@@ -21,6 +25,10 @@ angular.module('stories').controller('StoriesController', ['$scope', '$statePara
 
 			// Clear form fields
 			this.name = '';
+            this.teaserContent = '';
+            this.url = '';
+            this.publishDate = '';
+            this.publication = '';
 		};
 
 		// Remove existing Story

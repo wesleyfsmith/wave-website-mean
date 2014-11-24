@@ -1,0 +1,107 @@
+[
+    {
+        "teaserContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "url": "google.com",
+        "publishDate": "Jan 16, 2007",
+        "publication": "The Joyent Express",
+        "name": "This is the Article Title"
+    },
+    {
+        "teaserContent": "If batteries did not weigh or cost so much, most drivers might be wheeling electric vehicles by now.  A new Utah State University technology could overcome this barrier to electrically powered transport. How? By transferring power through the air, from charging pads embedded in a road to a vehicle's undercarriage 10 inches above, minimizing the need for on-board power storage.  This fall a USU start-up company will test the economic viability of such as wireless power transfer, or WPT, in the shuttle bus system at the University of Utah. Fueled with a federal grant, the U. is installing charging pads at bus stops and buying new electric buses to supplement its 28-bus fleet of diesel and compressed natural gas-powered vehicles.",
+        "url": "http://www.sltrib.com/sltrib/news/54117488-78/bus-technology-electric-smith.html.csp",
+        "publishDate": "June 18, 2012",
+        "publication": "The Salt Lake Tribune",
+        "name": "University of Utah Shuttle System Getting Wireless Electric Bus"
+    },
+    {
+        "teaserContent": "The University of Utah has placed an order for a 40-foot, all-electric transit bus with BYD Company Limited (BYD), which will be the first shuttle to be allowed to run across the heart of campus. The bus will be retrofitted with a WAVE wireless charging pad under the bus, developed by the Utah State University Energy Dynamics Laboratory, a provider of wireless power transfer for vehicles. This technology will allow the BYD electric buses to pull up over an embedded charger in the asphalt with a maximum of 10 inches clearance and “opportunity charge” the waiting bus with no moving parts or unsightly wires required. The embedded charge pads measure about three feet square and pose no danger to the public, according to BYD.",
+        "url": "http://www.greenfleetmagazine.com/news/story/2012/07/university-of-utah-purchases-40-foot-electric-bus-from-byd.aspx",
+        "publishDate": "July 3, 2012",
+        "publication": "GreenFleet",
+        "name": "University of Utah Purchases 40-Foot Electric Bus from BYD"
+    },
+    {
+        "teaserContent": "Utah State University presented a first-of-its-kind electric bus that is charged through wireless charging technology in a demonstration Nov. 15. The Aggie Bus rolled onto the streets carrying passengers just 16 months after USU demonstrated the first high-power, high-efficiency wireless power transfer system capable of transferring enough energy to quickly charge an electric vehicle. In July 2011, the USU Research Foundation demonstrated 90 percent electrical transfer efficiency of five kilowatts over an air gap of 10 inches. The demonstration validated that electric vehicles can efficiently be charged with wireless technology.",
+        "url": "http://www.usu.edu/ust/index.cfm?article=51862",
+        "publishDate": "November 15, 2012",
+        "publication": "Utah State University",
+        "name": "Utah State University Unveils Wirelessly Charged Electric Bus"
+    },
+    {
+        "teaserContent": "Designed by USU’s Wireless Power Transfer team and the Utah Science Technology and Research initiative’s Advanced Transportation Institute, the prototype Aggie Bus is already on the road. It uses the same wireless charging principle as an electric toothbrush or a wireless smartphone charger, except optimized for a massive public-transit vehicle.",
+        "url": "http://www.wired.com/2012/12/induction-charging-bus/",
+        "publishDate": "December 3, 2012",
+        "publication": "Wired",
+        "name": "Induction Charging Comes to Public Transit"
+    },
+    {
+        "teaserContent": "Utah Governor Gary Herbert and U.S. Senator Orrin Hatch have awarded the energy technology innovation of the year award to Utah State University’s wireless power transfer team for their wirelessly-charged Aggie Bus. The Aggie Bus is charged using a pad mounted underneath the vehicle. When the bus stops to load and unload passengers, another pad at the stop location transfers energy to the bus. This constant wireless recharging of the battery keeps the bus on route all day.",
+        "url": "http://upr.org/post/utah-state-electric-bus-receives-energy-award",
+        "publishDate": "January 23, 2013",
+        "publication": "Utah Public Radio",
+        "name": "Utah State Electric Bus Receives Energy Award"
+    },
+    {
+        "teaserContent": "Last November, Utah State University in partnership with WAVE™, a U.S. based technology spin off, showcased the first electric bus with Wireless Power Transfer (WPT) technology in North America. Three months later, Bombardier Transport announced a partnership with the German City of Mannheim and the Karlsruhe Institute of Technology for the 2014 rollout of this technology within the public transit system.",
+        "url": "http://www.carbontalks.ca/blog/electric-bus-picks-up-passengers-and-energy",
+        "publishDate": "April 08, 2013",
+        "publication": "Carbon Talks",
+        "name": "Electric bus picks up passengers… and energy"
+    },
+    {
+        "teaserContent": "When we contemplate the future of transportation we think of bullet trains, electric autonomous cars, sub-orbital planes and the like. We even wonder—still—when the flying car will land in reality. But we don’t think much about the infrastructure on which those vehicles depend. Some very enterprising and creative engineers do, however. Here are two ideas for re-inventing the road that I think could, literally, change everything about future transportation, if we care to be as bold as our ancestors in the 1930s.",
+        "url": "http://www.fastcoexist.com/1681562/solar-roads-charging-roads-and-the-future-of-transportation",
+        "publishDate": "March 12, 2013",
+        "publication": "Fast Company",
+        "name": "Solar Roads, Charging Roads, And The Future Of Transportation"
+    },
+    {
+        "teaserContent": "“We then added Wireless Advanced Vehicle Electrification (WAVE) technology developed by a U.S.-based company experimenting with plates that go in the ground that can charge the bus when the bus is parked over it,” says Cruz. “This addition is expected to increase the range by 10 to 20 percent, increasing the estimated range to 180 miles.”",
+        "url": "http://www.waveipt.com/blog/charging-forward-long-beach-transits-all-electric-bus-program-gets-under-way",
+        "publishDate": "May 7, 2013",
+        "publication": "California Transit Association",
+        "name": "Charging Forward"
+    },
+    {
+        "teaserContent": "\"I think we're on the verge of seeing much larger adoption,\" says Michael Masquelier, chief executive at WAVE, which develops the charging system. \"We have somewhere between 10 and 20 additional opportunities in cities in the U.S. that we're working on to deploy. There's a tremendous amount of interest.\"",
+        "url": "http://theatlanticcities.com/technology/2013/09/meet-next-generation-transit-bus/6801/",
+        "publishDate": "September 6, 2013",
+        "publication": "The Atlantic City Lab",
+        "name": "Meet the Next-Generation Bus"
+    },
+    {
+        "teaserContent": "SALT LAKE CITY — Many public transit riders see the system as providing a solution to air quality and emissions by reducing the number of cars on the road. What if there was a better solution, one that even further cuts emissions? Could new technology change the face of transportation?",
+        "url": "http://www.ksl.com/?nid=151&sid=27588541#lfkXZE38IVkgOKxE.99",
+        "publishDate": "November 11, 2013",
+        "publication": "KSL",
+        "name": "Driving transportation to a cleaner future"
+    },
+    {
+        "teaserContent": "“There is a primary charge plate, embedded in the roadway and a secondary charge plant, a mirror image of the primary charge plate, that is attached to the underside of the vehicle. When those two charge plates are aligned, that’s when the wireless communication sends a signal for the primary plate to charge the secondary plate and that is what initiates the wireless charge across the air gap into the bus.”",
+        "url": "http://www.cachevalleydaily.com/news/local/article_12bea898-52c5-11e3-9e5a-0019bb30f31a.html",
+        "publishDate": "November 21, 2013",
+        "publication": "Cache Valley Daily",
+        "name": "New wave of electric buses developed at USU"
+    },
+    {
+        "teaserContent": "OGDEN -- As Ogden City continues to ponder future transit connections to Weber State University and McKay-Dee Hospital, a new possibility for shuttling commuters has emerged that is mostly independent from the Utah Transit Authority.   The city council received a presentation Tuesday night from WAVE Technologies, a Utah State University technology spin-out company that makes clean, energy efficient buses while tackling the problem of heavy and expensive vehicle batteries that usually come hand in hand with vehicles that run on electricity.",
+        "url": "http://e.standard.net/stories/2013/12/11/e-bus-option-mass-transit-corridor-pondered-ogden-city",
+        "publishDate": "December 11, 2013",
+        "publication": "Standard-Examiner",
+        "name": "E-bus option for mass transit corridor pondered by Ogden City"
+    },
+    {
+        "teaserContent": "When it comes to the challenge of operating all-electric transit buses, keeping the bus powered to run the route is typically met with a plug-in charge, undercarriage connection or overhead catenary. The bus often charges at a strategic bus stop, such as end of route, where they need to accommodate the additional time to connect to the power source and charge.",
+        "url": "http://www.masstransitmag.com/article/11580871/all-electric-unplugged",
+        "publishDate": "August 16, 2014",
+        "publication": "Mass Transit Magazine",
+        "name": "All-Electric Bus Unplugged"
+    },
+    {
+       "teaserContent": "SALT LAKE CITY — New buses at the University of Utah are packing a high-tech improvement that allows the electrical vehicles to gain a charge through plates embedded in the road, which allows for smaller, lighter batteries and greater vehicle range.",
+        "url": "http://fox13now.com/2014/10/29/utah-based-company-debuts-wirelessly-recharging-buses-at-u-of-u/",
+        "publishDate": "October 29, 2014",
+        "publication": "Fox 13",
+        "name": "Utah-based company debuts wirelessly-recharging buses at U of U"
+    }
+]

@@ -106,6 +106,16 @@ exports.list = function(req, res) { Story.find().sort('-created').populate('user
 	});
 };
 
+exports.init = function(req, res) {
+    var initialStories = require('../data/initialStories');
+
+    for (var i = 0; i < initialStories.length; i++) {
+        var story = new Story(initialStories[i]);
+        story.save();
+    }
+
+};
+
 /**
  * Story middleware
  */
