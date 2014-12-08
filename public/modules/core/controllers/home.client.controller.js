@@ -6,7 +6,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 
-        $scope.allowFullScreen(true);
+//        $scope.allowFullScreen(true);
 
 		$scope.tweets = [];
 

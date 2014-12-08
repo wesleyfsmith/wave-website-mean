@@ -235,7 +235,11 @@ a {
 }
 
 .content {
-    margin: 0;
+    background-color: white;
+}
+
+.outer {
+    background-color: #242424;
 }
 
 .jumbotron h1 {

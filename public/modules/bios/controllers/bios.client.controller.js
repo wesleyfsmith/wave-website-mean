@@ -5,8 +5,6 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 	function($scope, $upload, $stateParams, $location, Authentication, Bios, Uploads) {
 		$scope.authentication = Authentication;
 
-        $scope.allowFullScreen(false);
-
         $scope.onFileSelect = function ($files){
             $scope.photo = $files[0];
         };

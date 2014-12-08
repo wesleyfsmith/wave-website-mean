@@ -44,11 +44,13 @@
 
 <body class="ng-cloak">
 	<header data-ng-include="'/modules/core/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-    <section class="content" data-ng-controller="FullScreenController">
-        <section data-ng-class="{container: !shouldAllowFullScreen}">
+    <div class="outer">
+    <section data-ng-controller="FullScreenController">
+        <section data-ng-class="{container: !shouldAllowFullScreen}" class="content" >
 			{% block content %}{% endblock %}
 		</section>
 	</section>
+    </div>
 
 	<!--Embedding The User Object-->
 	<script type="text/javascript">
