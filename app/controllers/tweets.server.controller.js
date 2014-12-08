@@ -7,7 +7,7 @@ var apiKeys = require('../../config/env/twitterKeys');
 var twit = new twitLibrary(apiKeys);
 
 exports.list = function(req, res) {
-    twit.get('search/tweets', { q: '@waveipt', count: 10 }, function(err, data, response) {
+    twit.get('search/tweets', { q: '@waveipt', count: 5 }, function(err, data, response) {
 
         res.jsonp(data);
 
