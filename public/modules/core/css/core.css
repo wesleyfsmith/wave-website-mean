@@ -239,7 +239,7 @@ a {
 }
 
 .outer {
-    background-color: #242424;
+    background-color: #343434;
 }
 
 .jumbotron h1 {
@@ -249,7 +249,7 @@ a {
 }
 
 .navbar-inverse {
-    background: rgba(0, 0, 0, 0.7);
+    background: #242424;
     /*background-color: black;*/
 }
 
