@@ -95,7 +95,7 @@ body {
 .selling-points {
     text-align: center;
     width: 100%;
-    margin: 400px 50px auto auto;
+    margin: 5% 50px auto auto;
 }
 
 .selling-point {
@@ -288,4 +288,16 @@ a {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.social i {
+    font-size: 1.23em;
+}
+
+.home img {
+    width: 100%;
+}
+
+.home .sub-image {
+    margin-top: 3%;
 }
