@@ -1,0 +1,8 @@
+.stories .list-group-item {
+    border: none;
+    border-bottom: solid #F5B613;
+}
+
+.stories .list-group .list-group-item-heading{
+    color: #F5B613;
+}
