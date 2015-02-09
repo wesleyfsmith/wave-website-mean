@@ -301,3 +301,90 @@ a {
 .home .sub-image {
     margin-top: 3%;
 }
+
+/*@keyframes fadein {*/
+    /*from { opacity: 0; }*/
+    /*to   { opacity: 1; }*/
+/*}*/
+
+/*.splash {*/
+    /*-webkit-animation: fadein 4s; *//**//* Safari, Chrome and Opera > 12.1 */
+    /*-moz-animation: fadein 4s; *//**//* Firefox < 16 */
+    /*-ms-animation: fadein 4s; *//**//* Internet Explorer */
+    /*-o-animation: fadein 4s; *//**//* Opera < 12.1 */
+    /*animation: fadein 4s;*/
+
+    /*-webkit-animation-name: fade-in;*/
+    /*-webkit-animation-duration: 1s;*/
+    /*-webkit-animation-timing-function: ease-in;*/
+    /*-webkit-animation-iteration-count: 1;*/
+    /*-webkit-animation-delay: 2s;*/
+/*}*/
+
+/*.splash:hover {*/
+    /*opacity: 0;*/
+/*}*/
+
+.no-opac {
+    opacity: 0;
+}
+
+.opac {
+    opacity: 1;
+}
+
+.splash {
+
+    /*opacity: 0;*/
+
+    -moz-transition: opacity 2s;
+
+    -webkit-transition: opacity 2s;
+
+    -o-transition: opacity 2s;
+
+    transition: opacity 2s;
+
+}
+
+.splash2 {
+
+    /*opacity: 0;*/
+
+    -moz-transition: opacity 2s;
+
+    -webkit-transition: opacity 2s;
+
+    -o-transition: opacity 2s;
+
+    transition: opacity 2s;
+
+}
+
+.splash3 {
+
+    /*opacity: 0;*/
+
+    -moz-transition: opacity 2.5s;
+
+    -webkit-transition: opacity 2.5s;
+
+    -o-transition: opacity 2.5s;
+
+    transition: opacity 2.5s;
+
+}
+
+.splash4 {
+
+    /*opacity: 0;*/
+
+    -moz-transition: opacity 3s;
+
+    -webkit-transition: opacity 3s;
+
+    -o-transition: opacity 3s;
+
+    transition: opacity 3s;
+
+}
