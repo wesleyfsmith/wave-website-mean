@@ -25,6 +25,9 @@ var app = require('./config/express')(db);
 // Bootstrap passport config
 require('./config/passport')();
 
+var cluster = require('cluster');
+var numCPUs = require('os').cpus().length;
+
 if (process.env.NODE_ENV === 'production') {
 	if (cluster.isMaster) {
 		// Fork workers.
