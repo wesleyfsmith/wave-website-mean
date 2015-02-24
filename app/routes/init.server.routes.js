@@ -1,3 +1,5 @@
+var mongoose = require('mongoose');
+
 module.exports = function(app) {
 
     var users = require('../../app/controllers/users');
@@ -9,6 +11,9 @@ module.exports = function(app) {
     //routes to read in data from json file
     app.route('/init')
         .get(function(req, res) {
+
+            mongoose.connection.db.dropDatabase();
+
             bios.init(req, res);
             projects.init(req, res);
             jobs.init(req, res);
