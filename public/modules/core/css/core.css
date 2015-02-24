@@ -148,10 +148,19 @@ body {
 
 
 
-.home .line {
+.line {
     border-bottom: 3px solid #F5B613;
     margin-bottom: 5%;
     margin-top: 5%;
+}
+
+.page-header {
+    border-bottom: 3px solid #F5B613;
+    margin-bottom: 5%;
+}
+
+img {
+    border-radius: 10px;
 }
 
 .home .row {
@@ -219,6 +228,7 @@ a {
 
 .navbar-logo {
     width: 100%;
+    border-radius: 0;
 }
 
 .navbar-brand {
@@ -296,6 +306,10 @@ a {
 
 .home img {
     width: 100%;
+}
+
+img {
+    border-radius: 20px;
 }
 
 .home .sub-image {

@@ -13,12 +13,6 @@
   height: 80%;
 }
 
-.list-projects .line {
-    border-bottom: 3px solid #d3d3d3;
-    margin-bottom: 5%;
-    margin-top: 5%;
-}
-
 .list-projects .feature-photo {
   width: 100%;
 }
