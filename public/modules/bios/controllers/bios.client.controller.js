@@ -147,10 +147,48 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
             bioBuckets['Mechanical Engineering'] = [];
             bioBuckets['Manufacturing Engineering'] = [];
 
+            var addBioToTeamBucket = function(bio, team) {
+
+                if (bioBuckets[team].length === 0) {
+                    bioBuckets[team].push(bio);
+                    return;
+                }
+
+                var priority = getTeamPriority(bio, team);
+
+                for (var i = 0; i < bioBuckets[team].length; i++) {
+
+                    var currentPriority = getTeamPriority(bioBuckets[team][i], team);
+
+                    if (priority > currentPriority) {
+                        bioBuckets[team].splice(i, 0, bio);
+                        return;
+                    }
+
+                }
+
+                //if we make it here, add bio to end of array
+                bioBuckets[team].push(bio);
+            };
+
+            var getTeamPriority = function(bio, team) {
+                if (typeof bio === 'undefined') {
+                    return Number.MIN_VALUE;
+                }
+
+                for (var i = 0; i < bio.teams.length; i++) {
+                    if (bio.teams[i].team === team) {
+                        return bio.teams[i].priority;
+                    }
+                }
+            };
+
             $scope.bios = Bios.query().$promise.then(function(bios) {
                 for (var i = 0; i < bios.length; i++) {
+
                     for (var j = 0; j < bios[i].teams.length; j++) {
-                        bioBuckets[bios[i].teams[j]].push(bios[i]);
+                        addBioToTeamBucket(bios[i], bios[i].teams[j].team);
+                        //bioBuckets[bios[i].teams[j].team].push(bios[i]);
                     }
                 }
             });
@@ -159,6 +197,19 @@ angular.module('bios').controller('BiosController', ['$scope', '$upload', '$stat
 
 
 		};
+
+        $scope.sortBio = function(team) {
+
+            return function(bio) {
+                for (var i = 0; i < bio.teams.length; i++) {
+
+                    if (bio.teams[i].team === team) {
+                        console.log(bio.teams[i].priority);
+                        return bio.teams[i].priority;
+                    }
+                }
+            };
+        };
 
 		// Find existing Bio
 		$scope.findOne = function() {

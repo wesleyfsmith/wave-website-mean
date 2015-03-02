@@ -35,7 +35,9 @@ var BioSchema = new Schema({
         required: 'Please select an image.'
     },
     teams: {
-        type: [String],
+        type: [{
+            team: String, priority: Number
+        }],
         required: 'Please select a team for this bio.'
     }
 });
