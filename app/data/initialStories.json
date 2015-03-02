@@ -96,5 +96,19 @@
         "publishDate": "October 29, 2014",
         "publication": "Fox 13",
         "name": "Utah-based company debuts wirelessly-recharging buses at U of U"
+    },
+    {
+        "teaserContent": "WAVE’s magnetic induction technology allows for wireless charging at bus stops, meaning this bus can make use of smaller, lighter and less expensive batteries than other electric buses around the country. The charging process is similar to how electric toothbrushes charge or the way an induction oven functions. Essentially, current is directed through a wire coil to create a magnetic field, which bridges the gap through air to excite electrons in another coil plate, which then converts the energy back into electricity and charges the battery.",
+        "url": "https://sustainableutah.wordpress.com/2014/10/29/the-electric-campus-shuttle-test/",
+        "publishDate": "October 29, 2014",
+        "publication": "Sustainable Utah",
+        "name": "The Electric Campus Shuttle Test"
+    },
+    {
+        "teaserContent": "WAVE is building electric buses that carry small batteries, allowing the bus to actually have room for passengers. Battery requirements for electric buses are so dramatic that electric buses are traditionally connected to overhead electricity and often run diesel engines when disconnected from power. To enable a bus to run on electricity all day the bus couldn’t carry passengers, it would only have room for carrying batteries–and it would be so expensive as to be a nonstarter. WAVE has found another way.",
+        "url": "http://www.forbes.com/sites/devinthorpe/2014/12/03/new-technology-allows-electric-bus-to-carry-passengers-in-addition-to-batteries/",
+        "publishDate": "December 3, 2014",
+        "publication": "Forbes",
+        "name": "New Technology Allows Electric Bus To Carry Passengers In Addition To Batteries"
     }
 ]
