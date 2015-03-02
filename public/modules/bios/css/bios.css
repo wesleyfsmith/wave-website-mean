@@ -104,12 +104,12 @@ img.grayscale.disabled {
     /*min-height: 500px;*/
 }
 
-.gray-background {
-    border-bottom: 3px solid #d3d3d3;
+.bios-page .page-header {
+    margin-bottom: 0;
 }
 
-.list-projects .page-header {
-    margin-bottom: 0px;
+.gray-background {
+    border-bottom: 3px solid #F5B613;
 }
 
 .vcenter {

@@ -28,6 +28,11 @@
   overflow: hidden;
 }
 
+.list-projects .page-header {
+  margin-bottom: 0;
+  border: 0;
+}
+
 .list-projects h3 {
     /*font-family: 'Libre Baskerville', serif;*/
 }

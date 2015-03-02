@@ -67,6 +67,12 @@ body {
     margin: 30px 0;
 }
 
+.slogan {
+    font-size: 1.3em;
+    color: #f9ad3e;
+    margin-top: 4.1%;
+}
+
 
 .jumbotron {
     border-bottom: 0;

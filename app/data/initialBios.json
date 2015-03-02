@@ -168,7 +168,7 @@
         "teams": [
             {
                 "team": "Power Electronics Engineering",
-                "priority": 5
+                "priority": 4
             }
         ]
     },
@@ -179,7 +179,7 @@
         "teams": [
             {
                 "team": "Power Electronics Engineering",
-                "priority": 4
+                "priority": 3
             }
         ]
     },
@@ -190,7 +190,7 @@
         "teams": [
             {
                 "team": "Power Electronics Engineering",
-                "priority": 3
+                "priority": 5
             }
         ]
     },
