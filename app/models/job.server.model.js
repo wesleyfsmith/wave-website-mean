@@ -20,6 +20,10 @@ var JobSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
+	priority: {
+		type: Number,
+		default: 0
+	},
 	responsibilities: {
 		type: String,
 		default: '',
