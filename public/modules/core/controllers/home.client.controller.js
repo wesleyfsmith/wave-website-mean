@@ -8,11 +8,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 
 //        $scope.allowFullScreen(true);
 
-		$scope.tweets = [];
 
-		$http.get('/tweets').success(function(data, status, headers, config) {
-			$scope.tweets = data.statuses;
-		});
 
 		$scope.landingView = '/modules/core/views/wavelogo.client.view.html';
 
