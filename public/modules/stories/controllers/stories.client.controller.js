@@ -69,5 +69,10 @@ angular.module('stories').controller('StoriesController', ['$scope', '$statePara
 				storyId: $stateParams.storyId
 			});
 		};
+
+		$scope.getPublishDate = function(story) {
+			return new Date(story.publishDate);
+		}
+
 	}
 ]);

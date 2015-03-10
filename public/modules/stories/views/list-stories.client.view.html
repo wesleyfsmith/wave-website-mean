@@ -8,14 +8,14 @@
         <img class="img-responsive" src="modules/stories/img/wave_news_landing.jpg"/>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="story in stories" data-ng-href="{{story.url}}" class="list-group-item">
+        <a data-ng-repeat="story in stories | orderBy: getPublishDate:true " data-ng-href="{{story.url}}" class="list-group-item">
             <h4 class="list-group-item-heading" data-ng-bind="story.name"></h4>
             <p>
                 {{story.teaserContent}}
             </p>
             <small class="list-group-item-text">
 				Written on
-				<span data-ng-bind="story.publishDate | date:'medium'"></span>
+				<span data-ng-bind="story.publishDate | date:'fullDate'"></span>
                 by
 				<span data-ng-bind="story.publication"></span>
 			</small>
