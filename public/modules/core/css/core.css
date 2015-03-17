@@ -412,3 +412,7 @@ img {
     transition: opacity 3s;
 
 }
+
+ul[rn-carousel] > li:first-child {
+    position: relative;
+}

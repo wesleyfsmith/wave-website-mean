@@ -5,7 +5,7 @@ var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'wave-website';
 	var applicationModuleVendorDependencies = ['textAngular', 'ngResource', 'ngAnimate', 'ui.router', 'ui.bootstrap', 'ui.utils', 'ngCookies',
-        'angularFileUpload', 'angular-carousel'];
+        'angularFileUpload', 'slick'];
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
 		// Create angular module

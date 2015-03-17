@@ -6,8 +6,7 @@ module.exports = {
 		lib: {
 			css: [
                 'public/lib/bootswatch/flatly/bootstrap.min.css',
-                'public/lib/components-font-awesome/css/font-awesome.min.css',
-				'public/lib/angular-carousel/dist/angular-carousel.min.css'
+                'public/lib/components-font-awesome/css/font-awesome.min.css'
 			],
 			js: [
                 'public/lib/ng-file-upload/angular-file-upload-shim.min.js',
@@ -26,8 +25,7 @@ module.exports = {
                 'public/lib/textAngular/src/textAngular.js',
                 'public/lib/rangy/rangy-core.js',
                 'public/lib/jquery/dist/jquery.min.js',
-                'public/lib/ng-grid/build/ng-grid.min.js',
-				'public/lib/angular-carousel/dist/angular-carousel.min.js'
+                'public/lib/ng-grid/build/ng-grid.min.js'
 			]
 		},
 		css: 'public/dist/application.min.css',

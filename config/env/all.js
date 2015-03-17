@@ -17,7 +17,7 @@ module.exports = {
 //				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
                 'public/lib/bootswatch/paper/bootstrap.css',
                 'public/lib/components-font-awesome/css/font-awesome.css',
-				'public/lib/angular-carousel/dist/angular-carousel.css'
+				'public/lib/slick-carousel/slick/slick.css'
 			],
 			js: [
                 'public/lib/ng-file-upload/angular-file-upload-shim.js',
@@ -37,7 +37,8 @@ module.exports = {
                 'public/lib/rangy/rangy-core.js',
                 'public/lib/jquery/dist/jquery.js',
                 'public/lib/ng-grid/build/ng-grid.js',
-				'public/lib/angular-carousel/dist/angular-carousel.js'
+				'public/lib/slick-carousel/slick/slick.js',
+				'public/lib/angular-slick/dist/slick.js'
 			]
 		},
 		css: [
