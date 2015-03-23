@@ -1,58 +1,16 @@
 <section data-ng-controller="HomeController" class="home">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 slider-row">
 
-            <slick lazy-load="ondemand" slides-to-show="3" slides-to-scroll="1" class="slider lazy ng-isolate-scope slick-initialized slick-slider">
-                <div class="slick-list draggable" tabindex="0"><div class="slick-track" style="opacity: 1; width: 2244px; -webkit-transform: translate3d(-935px, 0px, 0px);"><div class="slick-slide slick-cloned" style="width: 187px;"><div class="image"><img data-lazy="images/lazyfonz4.png" class="" src="images/lazyfonz4.png"></div></div><div class="slick-slide slick-cloned" style="width: 187px;"><div class="image"><img data-lazy="images/lazyfonz5.png" class="" src="images/lazyfonz5.png"></div></div><div class="slick-slide slick-cloned" style="width: 187px;"><div class="image"><img data-lazy="images/lazyfonz6.png" class="" src="images/lazyfonz6.png"></div></div><div class="slick-slide" style="width: 187px;"><div class="image"><img data-lazy="images/lazyfonz1.png" class="" src="images/lazyfonz1.png"></div></div><div class="slick-slide" style="width: 187px;"><div class="image"><img data-lazy="images/lazyfonz2.png" class="" src="images/lazyfonz2.png"></div></div><div class="slick-slide slick-active" style="width: 187px;"><div class="image"><img data-lazy="images/lazyfonz3.png" class="" src="images/lazyfonz3.png"></div></div><div class="slick-slide slick-active" style="width: 187px;"><div class="image"><img data-lazy="images/lazyfonz4.png" class="" src="images/lazyfonz4.png"></div></div><div class="slick-slide slick-active" style="width: 187px;"><div class="image"><img data-lazy="images/lazyfonz5.png" class="" src="images/lazyfonz5.png"></div></div><div class="slick-slide" style="width: 187px;"><div class="image"><img data-lazy="images/lazyfonz6.png" class="" src="images/lazyfonz6.png"></div></div><div class="slick-slide slick-cloned" style="width: 187px;"><div class="image"><img data-lazy="images/lazyfonz1.png" class="" src="images/lazyfonz1.png"></div></div><div class="slick-slide slick-cloned" style="width: 187px;"><div class="image"><img data-lazy="images/lazyfonz2.png" class="" src="images/lazyfonz2.png"></div></div><div class="slick-slide slick-cloned" style="width: 187px;"><div class="image"><img data-lazy="images/lazyfonz3.png" class="" src="images/lazyfonz3.png"></div></div></div></div>
-
-
-
-
-
-                <button type="button" class="slick-prev" tabindex="-1" style="display: block;">Previous</button><button type="button" class="slick-next" tabindex="-1" style="display: block;">Next</button></slick>
-
-            <!--<slick infinite="true" slides-to-show="3" slides-to-scroll="3">-->
-                <!--<div>-->
-                    <!--thingy-->
-                <!--</div>-->
-            <!--</slick>-->
-            <!--<slick>-->
-                <!--<li>-->
-                <!--<img src="modules/stories/img/wave_news_landing.jpg"/>-->
-                <!--&lt;!&ndash; Main bus photo &ndash;&gt;-->
-                <!--</li>-->
-                <!--<li>-->
-                <!--<img class="img-responsive" src="modules/stories/img/wave_news_landing.jpg"/>-->
-                <!--&lt;!&ndash; cord cutting &ndash;&gt;-->
-                <!--</li>-->
-            <!--</slick>-->
-
-            <!--<ul rn-carousel class="carousel-override" style="height: 393px">-->
-                <!--<li>-->
-                    <!--<img src="modules/stories/img/wave_news_landing.jpg"/>-->
-                    <!--&lt;!&ndash; Main bus photo &ndash;&gt;-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<img class="img-responsive" src="modules/stories/img/wave_news_landing.jpg"/>-->
-                    <!--&lt;!&ndash; cord cutting &ndash;&gt;-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<img class="img-responsive" src="modules/stories/img/wave_news_landing.jpg"/>-->
-                    <!--&lt;!&ndash; News &ndash;&gt;-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<img class="img-responsive" src="modules/stories/img/wave_news_landing.jpg"/>-->
-                    <!--&lt;!&ndash; MST trolley &ndash;&gt;-->
-                <!--</li>-->
-                <!--<li>-->
-                    <!--<img class="img-responsive" src="modules/stories/img/wave_news_landing.jpg"/>-->
-                    <!--&lt;!&ndash; Pad closeup &ndash;&gt;-->
-                <!--</li>-->
-            <!--</ul>-->
+            <flex-slider slide="s in slides" animation="slide" animation-loop="true" item-margin="5">
+                <li>
+                    <img ng-src="{{s}}">
+                </li>
+            </flex-slider>
         </div>
     </div>
 
-    <div class="line"></div>
+    <div class="line bottom-only"></div>
 
         <!--<h1 class="sub">-->
             <!--Solving the battery problem through wireless charging.-->
@@ -66,7 +24,8 @@
                     <i class="fa fa-dollar fa-4x"></i>
                     <h3>Economic</h3>
                     <p>Wirelessly charged electric vehicles are cost competitive with conventional vehicles.</p>
-                </div></div>
+                </div>
+                </div>
 
             <div class="col-md-4"><div class="selling-point">
                 <i class="fa fa-bolt fa-4x"></i>

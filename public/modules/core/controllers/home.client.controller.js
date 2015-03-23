@@ -8,7 +8,8 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 
 //        $scope.allowFullScreen(true);
 
-
+		$scope.slides = ['modules/core/img/slider/slide_bus_main.jpg', 'modules/stories/img/wave_news_landing.jpg',
+			'modules/core/img/slider/slider_team.jpg', 'modules/core/img/slider/slide_bus_charger.jpg'];
 
 		$scope.landingView = '/modules/core/views/wavelogo.client.view.html';
 

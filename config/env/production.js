@@ -6,12 +6,16 @@ module.exports = {
 		lib: {
 			css: [
                 'public/lib/bootswatch/flatly/bootstrap.min.css',
-                'public/lib/components-font-awesome/css/font-awesome.min.css'
+                'public/lib/components-font-awesome/css/font-awesome.min.css',
+				'public/lib/flexslider/flexslider.css'
 			],
 			js: [
                 'public/lib/ng-file-upload/angular-file-upload-shim.min.js',
-                'public/lib/angular/angular.min.js',
-                'public/lib/angular-resource/angular-resource.min.js',
+				'public/lib/jquery/dist/jquery.min.js',
+				'public/lib/flexslider/jquery.flexslider-min.js',
+				'public/lib/angular/angular.min.js',
+				'public/lib/angular-flexslider/angular-flexslider.js',
+				'public/lib/angular-resource/angular-resource.min.js',
                 'public/lib/angular-cookies/angular-cookies.min.js',
                 'public/lib/angular-animate/angular-animate.min.js',
                 'public/lib/angular-touch/angular-touhomech.min.js',
@@ -24,7 +28,6 @@ module.exports = {
                 'public/lib/textAngular/src/textAngularSetup.js',
                 'public/lib/textAngular/src/textAngular.js',
                 'public/lib/rangy/rangy-core.js',
-                'public/lib/jquery/dist/jquery.min.js',
                 'public/lib/ng-grid/build/ng-grid.min.js'
 			]
 		},

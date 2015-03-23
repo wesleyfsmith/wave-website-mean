@@ -416,3 +416,11 @@ img {
 ul[rn-carousel] > li:first-child {
     position: relative;
 }
+
+.slider-row {
+    margin-top: 3%;
+}
+
+.bottom-only {
+    margin-top: 0;
+}
