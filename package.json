@@ -50,7 +50,8 @@
     "multiparty": "~3.3.1",
     "blueimp-file-upload-expressjs": "~0.2.9",
     "twit": "~1.1.18",
-    "cluster": "~0.7.7"
+    "cluster": "~0.7.7",
+    "mean-seo": "0.0.8"
   },
   "devDependencies": {
     "supertest": "~0.13.0",
